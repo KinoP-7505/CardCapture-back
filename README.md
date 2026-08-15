@@ -1,0 +1,2 @@
+# CardCapture-back
+カードキャプチャーのサーバアプリ
