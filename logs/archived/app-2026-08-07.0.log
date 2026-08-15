@@ -1,0 +1,543 @@
+2026-08-07T07:43:22.375+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 22128 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-07T07:43:22.376+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-07T07:43:23.153+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-07T07:43:23.156+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-07T07:43:23.157+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-07T07:43:23.193+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 804 ms
+2026-08-07T07:43:23.305+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-08-07T07:43:23.463+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-07T07:43:23.471+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 1.303 seconds (process running for 287294.655)
+2026-08-07T07:43:23.475+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-07T07:43:34.904+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-07T07:43:34.904+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-07T07:43:34.910+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2026-08-07T07:43:35.585+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 245 ms
+2026-08-07T07:45:54.716+09:00  INFO 22128 --- [CardCapture-back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 18 class path changes (0 additions, 0 deletions, 18 modifications)
+2026-08-07T07:45:54.721+09:00  INFO 22128 --- [CardCapture-back] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-07T07:45:54.731+09:00  INFO 22128 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-07T07:45:54.946+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 22128 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-07T07:45:54.947+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-07T07:45:55.298+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-07T07:45:55.301+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-07T07:45:55.301+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-07T07:45:55.330+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 380 ms
+2026-08-07T07:45:55.394+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-08-07T07:45:55.512+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-07T07:45:55.517+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 0.616 seconds (process running for 287446.71)
+2026-08-07T07:45:55.521+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-07T07:45:59.618+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-07T07:45:59.618+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-07T07:45:59.621+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-08-07T07:45:59.970+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 128 ms
+2026-08-07T07:46:17.738+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 開始
+2026-08-07T07:46:17.745+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 2
+2026-08-07T07:46:17.746+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 3
+2026-08-07T07:46:17.747+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 4
+2026-08-07T07:46:17.747+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 5
+2026-08-07T07:46:17.747+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 6
+2026-08-07T07:46:17.747+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 7
+2026-08-07T07:46:17.748+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 8
+2026-08-07T07:46:17.748+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 9
+2026-08-07T07:46:17.748+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 10
+2026-08-07T07:46:17.748+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード ジャック
+2026-08-07T07:46:17.748+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード クイーン
+2026-08-07T07:46:17.749+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード キング
+2026-08-07T07:46:17.749+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード エース
+2026-08-07T07:46:17.749+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 2
+2026-08-07T07:46:17.749+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 3
+2026-08-07T07:46:17.749+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 4
+2026-08-07T07:46:17.750+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 5
+2026-08-07T07:46:17.750+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 6
+2026-08-07T07:46:17.750+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 7
+2026-08-07T07:46:17.750+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 8
+2026-08-07T07:46:17.750+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 9
+2026-08-07T07:46:17.751+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 10
+2026-08-07T07:46:17.751+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート ジャック
+2026-08-07T07:46:17.751+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート クイーン
+2026-08-07T07:46:17.751+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート キング
+2026-08-07T07:46:17.752+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート エース
+2026-08-07T07:46:17.752+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 2
+2026-08-07T07:46:17.752+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 3
+2026-08-07T07:46:17.752+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 4
+2026-08-07T07:46:17.752+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 5
+2026-08-07T07:46:17.752+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 6
+2026-08-07T07:46:17.752+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 7
+2026-08-07T07:46:17.752+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 8
+2026-08-07T07:46:17.753+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 9
+2026-08-07T07:46:17.753+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 10
+2026-08-07T07:46:17.753+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ ジャック
+2026-08-07T07:46:17.753+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ クイーン
+2026-08-07T07:46:17.753+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ キング
+2026-08-07T07:46:17.753+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ エース
+2026-08-07T07:46:17.753+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 2
+2026-08-07T07:46:17.754+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 3
+2026-08-07T07:46:17.754+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 4
+2026-08-07T07:46:17.754+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 5
+2026-08-07T07:46:17.754+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 6
+2026-08-07T07:46:17.754+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 7
+2026-08-07T07:46:17.754+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 8
+2026-08-07T07:46:17.754+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 9
+2026-08-07T07:46:17.754+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 10
+2026-08-07T07:46:17.755+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ ジャック
+2026-08-07T07:46:17.755+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ クイーン
+2026-08-07T07:46:17.755+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ キング
+2026-08-07T07:46:17.755+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ エース
+2026-08-07T07:46:17.756+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ジョーカー 1
+2026-08-07T07:46:17.756+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ジョーカー 2
+2026-08-07T07:46:17.756+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-6] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 終了
+2026-08-07T07:51:38.757+09:00  INFO 22128 --- [CardCapture-back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 20 class path changes (0 additions, 20 deletions, 0 modifications)
+2026-08-07T07:51:38.925+09:00  INFO 22128 --- [CardCapture-back] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-07T07:51:38.998+09:00  INFO 22128 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-07T07:51:40.445+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 22128 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-07T07:51:40.446+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-07T07:51:41.140+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-07T07:51:41.145+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-07T07:51:41.146+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-07T07:51:41.178+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 722 ms
+2026-08-07T07:51:41.277+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-08-07T07:51:41.447+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-07T07:51:41.453+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 1.221 seconds (process running for 287792.662)
+2026-08-07T07:51:41.456+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-07T07:51:42.842+09:00  INFO 22128 --- [CardCapture-back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 20 class path changes (20 additions, 0 deletions, 0 modifications)
+2026-08-07T07:51:42.844+09:00  INFO 22128 --- [CardCapture-back] [Thread-13] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-07T07:51:42.852+09:00  INFO 22128 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-07T07:51:42.958+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 22128 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-07T07:51:42.960+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-07T07:51:43.282+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-07T07:51:43.282+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-07T07:51:43.283+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-07T07:51:43.310+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 347 ms
+2026-08-07T07:51:43.376+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-08-07T07:51:43.529+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-07T07:51:43.543+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 0.63 seconds (process running for 287794.752)
+2026-08-07T07:51:43.546+09:00  INFO 22128 --- [CardCapture-back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-07T07:51:50.940+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-07T07:51:50.940+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-07T07:51:50.943+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-07T07:51:50.951+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 開始
+2026-08-07T07:51:50.963+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 2
+2026-08-07T07:51:50.964+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 3
+2026-08-07T07:51:50.964+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 4
+2026-08-07T07:51:50.964+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 5
+2026-08-07T07:51:50.965+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 6
+2026-08-07T07:51:50.965+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 7
+2026-08-07T07:51:50.965+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 8
+2026-08-07T07:51:50.965+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 9
+2026-08-07T07:51:50.965+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード 10
+2026-08-07T07:51:50.965+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード ジャック
+2026-08-07T07:51:50.965+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード クイーン
+2026-08-07T07:51:50.965+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード キング
+2026-08-07T07:51:50.965+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :スペード エース
+2026-08-07T07:51:50.966+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 2
+2026-08-07T07:51:50.966+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 3
+2026-08-07T07:51:50.966+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 4
+2026-08-07T07:51:50.967+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 5
+2026-08-07T07:51:50.969+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 6
+2026-08-07T07:51:50.969+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 7
+2026-08-07T07:51:50.969+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 8
+2026-08-07T07:51:50.969+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 9
+2026-08-07T07:51:50.969+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート 10
+2026-08-07T07:51:50.969+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート ジャック
+2026-08-07T07:51:50.969+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート クイーン
+2026-08-07T07:51:50.969+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート キング
+2026-08-07T07:51:50.969+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ハート エース
+2026-08-07T07:51:50.969+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 2
+2026-08-07T07:51:50.969+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 3
+2026-08-07T07:51:50.969+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 4
+2026-08-07T07:51:50.970+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 5
+2026-08-07T07:51:50.971+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 6
+2026-08-07T07:51:50.971+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 7
+2026-08-07T07:51:50.971+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 8
+2026-08-07T07:51:50.971+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 9
+2026-08-07T07:51:50.971+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ 10
+2026-08-07T07:51:50.971+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ ジャック
+2026-08-07T07:51:50.971+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ クイーン
+2026-08-07T07:51:50.971+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ キング
+2026-08-07T07:51:50.971+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ダイヤ エース
+2026-08-07T07:51:50.971+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 2
+2026-08-07T07:51:50.971+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 3
+2026-08-07T07:51:50.972+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 4
+2026-08-07T07:51:50.972+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 5
+2026-08-07T07:51:50.972+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 6
+2026-08-07T07:51:50.972+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 7
+2026-08-07T07:51:50.972+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 8
+2026-08-07T07:51:50.972+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 9
+2026-08-07T07:51:50.972+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ 10
+2026-08-07T07:51:50.972+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ ジャック
+2026-08-07T07:51:50.973+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ クイーン
+2026-08-07T07:51:50.973+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ キング
+2026-08-07T07:51:50.973+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :クラブ エース
+2026-08-07T07:51:50.973+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ジョーカー 1
+2026-08-07T07:51:50.973+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :ジョーカー 2
+2026-08-07T07:51:50.973+09:00  INFO 22128 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 終了
+2026-08-07T07:58:35.264+09:00  INFO 22128 --- [CardCapture-back] [RMI TCP Connection(481)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-08-07T07:58:35.504+09:00  INFO 22128 --- [CardCapture-back] [RMI TCP Connection(481)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-07T07:58:35.545+09:00  INFO 22128 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-07T08:15:02.420+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 30420 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-07T08:15:02.424+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-07T08:15:02.498+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-07T08:15:02.499+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-07T08:15:04.053+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-07T08:15:04.078+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-07T08:15:04.079+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-07T08:15:04.151+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1650 ms
+2026-08-07T08:15:04.408+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-08-07T08:15:04.837+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-07T08:15:04.848+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 3.082 seconds (process running for 4.19)
+2026-08-07T08:15:10.107+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-07T08:15:10.109+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-07T08:15:10.113+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-08-07T08:15:10.898+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 386 ms
+2026-08-07T08:15:17.747+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 開始
+2026-08-07T08:15:17.748+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 開始
+2026-08-07T08:15:17.752+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 103 / スペード 2
+2026-08-07T08:15:17.753+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 104 / スペード 3
+2026-08-07T08:15:17.753+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / スペード 4
+2026-08-07T08:15:17.755+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / スペード 5
+2026-08-07T08:15:17.755+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / スペード 6
+2026-08-07T08:15:17.755+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / スペード 7
+2026-08-07T08:15:17.756+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / スペード 8
+2026-08-07T08:15:17.756+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / スペード 9
+2026-08-07T08:15:17.756+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / スペード 10
+2026-08-07T08:15:17.757+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / スペード ジャック
+2026-08-07T08:15:17.757+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / スペード クイーン
+2026-08-07T08:15:17.758+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / スペード キング
+2026-08-07T08:15:17.759+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / スペード エース
+2026-08-07T08:15:17.759+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 104 / ハート 2
+2026-08-07T08:15:17.760+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / ハート 3
+2026-08-07T08:15:17.760+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / ハート 4
+2026-08-07T08:15:17.761+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / ハート 5
+2026-08-07T08:15:17.761+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / ハート 6
+2026-08-07T08:15:17.761+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / ハート 7
+2026-08-07T08:15:17.761+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / ハート 8
+2026-08-07T08:15:17.762+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / ハート 9
+2026-08-07T08:15:17.762+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / ハート 10
+2026-08-07T08:15:17.762+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / ハート ジャック
+2026-08-07T08:15:17.762+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / ハート クイーン
+2026-08-07T08:15:17.762+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / ハート キング
+2026-08-07T08:15:17.762+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / ハート エース
+2026-08-07T08:15:17.764+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / ダイヤ 2
+2026-08-07T08:15:17.764+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / ダイヤ 3
+2026-08-07T08:15:17.764+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / ダイヤ 4
+2026-08-07T08:15:17.765+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / ダイヤ 5
+2026-08-07T08:15:17.765+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / ダイヤ 6
+2026-08-07T08:15:17.765+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / ダイヤ 7
+2026-08-07T08:15:17.765+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / ダイヤ 8
+2026-08-07T08:15:17.766+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / ダイヤ 9
+2026-08-07T08:15:17.766+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / ダイヤ 10
+2026-08-07T08:15:17.766+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / ダイヤ ジャック
+2026-08-07T08:15:17.766+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / ダイヤ クイーン
+2026-08-07T08:15:17.767+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / ダイヤ キング
+2026-08-07T08:15:17.767+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 117 / ダイヤ エース
+2026-08-07T08:15:17.767+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / クラブ 2
+2026-08-07T08:15:17.767+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / クラブ 3
+2026-08-07T08:15:17.768+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / クラブ 4
+2026-08-07T08:15:17.768+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / クラブ 5
+2026-08-07T08:15:17.768+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / クラブ 6
+2026-08-07T08:15:17.768+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / クラブ 7
+2026-08-07T08:15:17.769+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / クラブ 8
+2026-08-07T08:15:17.769+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / クラブ 9
+2026-08-07T08:15:17.770+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / クラブ 10
+2026-08-07T08:15:17.770+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / クラブ ジャック
+2026-08-07T08:15:17.770+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / クラブ クイーン
+2026-08-07T08:15:17.770+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 117 / クラブ キング
+2026-08-07T08:15:17.770+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 118 / クラブ エース
+2026-08-07T08:15:17.770+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / ジョーカー 1
+2026-08-07T08:15:17.771+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / ジョーカー 2
+2026-08-07T08:15:17.771+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 終了
+2026-08-07T08:15:17.771+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-7] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 終了
+2026-08-07T08:18:41.967+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 開始
+2026-08-07T08:18:41.983+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 開始
+2026-08-07T08:18:41.989+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 103 / スペード 2
+2026-08-07T08:18:41.989+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 104 / スペード 3
+2026-08-07T08:18:41.991+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / スペード 4
+2026-08-07T08:18:41.991+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / スペード 5
+2026-08-07T08:18:41.991+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / スペード 6
+2026-08-07T08:18:41.991+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / スペード 7
+2026-08-07T08:18:41.991+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / スペード 8
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / スペード 9
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / スペード 10
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / スペード ジャック
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / スペード クイーン
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / スペード キング
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / スペード エース
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 104 / ハート 2
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / ハート 3
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / ハート 4
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / ハート 5
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / ハート 6
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / ハート 7
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / ハート 8
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / ハート 9
+2026-08-07T08:18:41.992+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / ハート 10
+2026-08-07T08:18:41.993+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / ハート ジャック
+2026-08-07T08:18:41.993+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / ハート クイーン
+2026-08-07T08:18:41.993+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / ハート キング
+2026-08-07T08:18:41.993+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / ハート エース
+2026-08-07T08:18:41.993+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / ダイヤ 2
+2026-08-07T08:18:41.993+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / ダイヤ 3
+2026-08-07T08:18:41.993+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / ダイヤ 4
+2026-08-07T08:18:41.993+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / ダイヤ 5
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / ダイヤ 6
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / ダイヤ 7
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / ダイヤ 8
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / ダイヤ 9
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / ダイヤ 10
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / ダイヤ ジャック
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / ダイヤ クイーン
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / ダイヤ キング
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 117 / ダイヤ エース
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / クラブ 2
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / クラブ 3
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / クラブ 4
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / クラブ 5
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / クラブ 6
+2026-08-07T08:18:41.995+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / クラブ 7
+2026-08-07T08:18:41.996+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / クラブ 8
+2026-08-07T08:18:41.996+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / クラブ 9
+2026-08-07T08:18:41.996+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / クラブ 10
+2026-08-07T08:18:41.996+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / クラブ ジャック
+2026-08-07T08:18:42.034+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / クラブ クイーン
+2026-08-07T08:18:42.036+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 117 / クラブ キング
+2026-08-07T08:18:42.036+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 118 / クラブ エース
+2026-08-07T08:18:42.037+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / ジョーカー 1
+2026-08-07T08:18:42.037+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / ジョーカー 2
+2026-08-07T08:18:42.037+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 終了
+2026-08-07T08:18:42.037+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-10] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 終了
+2026-08-07T08:19:10.604+09:00  INFO 30420 --- [CardCapture-back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 18 class path changes (0 additions, 15 deletions, 3 modifications)
+2026-08-07T08:19:10.632+09:00  INFO 30420 --- [CardCapture-back] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-07T08:19:10.758+09:00  INFO 30420 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-07T08:19:11.140+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 30420 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-07T08:19:11.142+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-07T08:19:11.955+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-07T08:19:11.959+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-07T08:19:11.960+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-07T08:19:11.989+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 833 ms
+2026-08-07T08:19:12.084+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-08-07T08:19:12.266+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-07T08:19:12.270+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 1.232 seconds (process running for 251.619)
+2026-08-07T08:19:12.273+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-07T08:19:13.660+09:00  INFO 30420 --- [CardCapture-back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 15 class path changes (15 additions, 0 deletions, 0 modifications)
+2026-08-07T08:19:13.661+09:00  INFO 30420 --- [CardCapture-back] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-07T08:19:13.668+09:00  INFO 30420 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-07T08:19:13.748+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 30420 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-07T08:19:13.749+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-07T08:19:13.994+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-07T08:19:13.995+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-07T08:19:13.996+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-07T08:19:14.014+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 263 ms
+2026-08-07T08:19:14.058+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-08-07T08:19:14.141+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-07T08:19:14.144+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 0.427 seconds (process running for 253.492)
+2026-08-07T08:19:14.146+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-07T08:19:17.342+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-07T08:19:17.343+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-07T08:19:17.345+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-07T08:19:17.348+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 開始
+2026-08-07T08:19:17.349+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 開始
+2026-08-07T08:19:17.364+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 103 / スペード1 22
+2026-08-07T08:19:17.364+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 104 / スペード1 33
+2026-08-07T08:19:17.365+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / スペード1 44
+2026-08-07T08:19:17.365+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / スペード1 55
+2026-08-07T08:19:17.365+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / スペード1 66
+2026-08-07T08:19:17.365+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / スペード1 77
+2026-08-07T08:19:17.365+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / スペード1 88
+2026-08-07T08:19:17.365+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / スペード1 99
+2026-08-07T08:19:17.365+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / スペード1 1010
+2026-08-07T08:19:17.365+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / スペード1 11ジャック
+2026-08-07T08:19:17.365+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / スペード1 12クイーン
+2026-08-07T08:19:17.365+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / スペード1 13キング
+2026-08-07T08:19:17.365+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / スペード1 14エース
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 104 / ハート2 22
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / ハート2 33
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / ハート2 44
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / ハート2 55
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / ハート2 66
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / ハート2 77
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / ハート2 88
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / ハート2 99
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / ハート2 1010
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / ハート2 11ジャック
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / ハート2 12クイーン
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / ハート2 13キング
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / ハート2 14エース
+2026-08-07T08:19:17.366+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / ダイヤ3 22
+2026-08-07T08:19:17.367+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / ダイヤ3 33
+2026-08-07T08:19:17.367+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / ダイヤ3 44
+2026-08-07T08:19:17.367+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / ダイヤ3 55
+2026-08-07T08:19:17.367+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / ダイヤ3 66
+2026-08-07T08:19:17.367+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / ダイヤ3 77
+2026-08-07T08:19:17.367+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / ダイヤ3 88
+2026-08-07T08:19:17.367+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / ダイヤ3 99
+2026-08-07T08:19:17.367+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / ダイヤ3 1010
+2026-08-07T08:19:17.368+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / ダイヤ3 11ジャック
+2026-08-07T08:19:17.368+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / ダイヤ3 12クイーン
+2026-08-07T08:19:17.368+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / ダイヤ3 13キング
+2026-08-07T08:19:17.368+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 117 / ダイヤ3 14エース
+2026-08-07T08:19:17.368+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / クラブ4 22
+2026-08-07T08:19:17.368+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / クラブ4 33
+2026-08-07T08:19:17.368+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / クラブ4 44
+2026-08-07T08:19:17.368+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / クラブ4 55
+2026-08-07T08:19:17.369+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / クラブ4 66
+2026-08-07T08:19:17.369+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / クラブ4 77
+2026-08-07T08:19:17.369+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / クラブ4 88
+2026-08-07T08:19:17.369+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / クラブ4 99
+2026-08-07T08:19:17.369+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / クラブ4 1010
+2026-08-07T08:19:17.369+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / クラブ4 11ジャック
+2026-08-07T08:19:17.369+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / クラブ4 12クイーン
+2026-08-07T08:19:17.370+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 117 / クラブ4 13キング
+2026-08-07T08:19:17.370+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 118 / クラブ4 14エース
+2026-08-07T08:19:17.370+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / ジョーカー5 11
+2026-08-07T08:19:17.370+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / ジョーカー5 22
+2026-08-07T08:19:17.370+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 終了
+2026-08-07T08:19:17.370+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 終了
+2026-08-07T08:20:55.740+09:00  INFO 30420 --- [CardCapture-back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 18 class path changes (0 additions, 0 deletions, 18 modifications)
+2026-08-07T08:20:55.741+09:00  INFO 30420 --- [CardCapture-back] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-07T08:20:55.748+09:00  INFO 30420 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-07T08:20:55.833+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 30420 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-07T08:20:55.834+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-07T08:20:56.117+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-07T08:20:56.120+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-07T08:20:56.120+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-07T08:20:56.139+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 303 ms
+2026-08-07T08:20:56.189+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-08-07T08:20:56.282+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-07T08:20:56.285+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 0.489 seconds (process running for 355.637)
+2026-08-07T08:20:56.287+09:00  INFO 30420 --- [CardCapture-back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-07T08:21:00.473+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-07T08:21:00.473+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-07T08:21:00.475+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-07T08:21:00.479+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 開始
+2026-08-07T08:21:00.481+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 開始
+2026-08-07T08:21:00.491+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 103 / suitLスペード s:1 / num: 2numLab:2
+2026-08-07T08:21:00.491+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 104 / suitLスペード s:1 / num: 3numLab:3
+2026-08-07T08:21:00.491+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / suitLスペード s:1 / num: 4numLab:4
+2026-08-07T08:21:00.491+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / suitLスペード s:1 / num: 5numLab:5
+2026-08-07T08:21:00.491+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / suitLスペード s:1 / num: 6numLab:6
+2026-08-07T08:21:00.492+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / suitLスペード s:1 / num: 7numLab:7
+2026-08-07T08:21:00.492+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / suitLスペード s:1 / num: 8numLab:8
+2026-08-07T08:21:00.492+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / suitLスペード s:1 / num: 9numLab:9
+2026-08-07T08:21:00.492+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / suitLスペード s:1 / num: 10numLab:10
+2026-08-07T08:21:00.492+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / suitLスペード s:1 / num: 11numLab:ジャック
+2026-08-07T08:21:00.492+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / suitLスペード s:1 / num: 12numLab:クイーン
+2026-08-07T08:21:00.492+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / suitLスペード s:1 / num: 13numLab:キング
+2026-08-07T08:21:00.493+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / suitLスペード s:1 / num: 14numLab:エース
+2026-08-07T08:21:00.493+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 104 / suitLハート s:2 / num: 2numLab:2
+2026-08-07T08:21:00.493+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / suitLハート s:2 / num: 3numLab:3
+2026-08-07T08:21:00.493+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / suitLハート s:2 / num: 4numLab:4
+2026-08-07T08:21:00.493+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / suitLハート s:2 / num: 5numLab:5
+2026-08-07T08:21:00.493+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / suitLハート s:2 / num: 6numLab:6
+2026-08-07T08:21:00.493+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / suitLハート s:2 / num: 7numLab:7
+2026-08-07T08:21:00.493+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / suitLハート s:2 / num: 8numLab:8
+2026-08-07T08:21:00.494+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / suitLハート s:2 / num: 9numLab:9
+2026-08-07T08:21:00.494+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / suitLハート s:2 / num: 10numLab:10
+2026-08-07T08:21:00.494+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / suitLハート s:2 / num: 11numLab:ジャック
+2026-08-07T08:21:00.494+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / suitLハート s:2 / num: 12numLab:クイーン
+2026-08-07T08:21:00.494+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / suitLハート s:2 / num: 13numLab:キング
+2026-08-07T08:21:00.494+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / suitLハート s:2 / num: 14numLab:エース
+2026-08-07T08:21:00.494+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / suitLダイヤ s:3 / num: 2numLab:2
+2026-08-07T08:21:00.495+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / suitLダイヤ s:3 / num: 3numLab:3
+2026-08-07T08:21:00.495+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / suitLダイヤ s:3 / num: 4numLab:4
+2026-08-07T08:21:00.495+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / suitLダイヤ s:3 / num: 5numLab:5
+2026-08-07T08:21:00.495+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / suitLダイヤ s:3 / num: 6numLab:6
+2026-08-07T08:21:00.496+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / suitLダイヤ s:3 / num: 7numLab:7
+2026-08-07T08:21:00.497+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / suitLダイヤ s:3 / num: 8numLab:8
+2026-08-07T08:21:00.497+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / suitLダイヤ s:3 / num: 9numLab:9
+2026-08-07T08:21:00.497+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / suitLダイヤ s:3 / num: 10numLab:10
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / suitLダイヤ s:3 / num: 11numLab:ジャック
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / suitLダイヤ s:3 / num: 12numLab:クイーン
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / suitLダイヤ s:3 / num: 13numLab:キング
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 117 / suitLダイヤ s:3 / num: 14numLab:エース
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / suitLクラブ s:4 / num: 2numLab:2
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / suitLクラブ s:4 / num: 3numLab:3
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / suitLクラブ s:4 / num: 4numLab:4
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / suitLクラブ s:4 / num: 5numLab:5
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / suitLクラブ s:4 / num: 6numLab:6
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / suitLクラブ s:4 / num: 7numLab:7
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / suitLクラブ s:4 / num: 8numLab:8
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / suitLクラブ s:4 / num: 9numLab:9
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / suitLクラブ s:4 / num: 10numLab:10
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / suitLクラブ s:4 / num: 11numLab:ジャック
+2026-08-07T08:21:00.498+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / suitLクラブ s:4 / num: 12numLab:クイーン
+2026-08-07T08:21:00.499+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 117 / suitLクラブ s:4 / num: 13numLab:キング
+2026-08-07T08:21:00.499+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 118 / suitLクラブ s:4 / num: 14numLab:エース
+2026-08-07T08:21:00.499+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / suitLジョーカー s:5 / num: 1numLab:1
+2026-08-07T08:21:00.499+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / suitLジョーカー s:5 / num: 2numLab:2
+2026-08-07T08:21:00.499+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 終了
+2026-08-07T08:21:00.499+09:00  INFO 30420 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 終了
+2026-08-07T08:21:32.795+09:00  INFO 30420 --- [CardCapture-back] [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-08-07T08:21:32.796+09:00  INFO 30420 --- [CardCapture-back] [RMI TCP Connection(11)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-07T08:21:32.802+09:00  INFO 30420 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-07T18:58:05.859+09:00  INFO 24256 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 24256 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-07T18:58:05.868+09:00  INFO 24256 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-07T18:58:06.001+09:00  INFO 24256 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-07T18:58:06.002+09:00  INFO 24256 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-07T18:58:08.580+09:00  INFO 24256 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-07T18:58:08.619+09:00  INFO 24256 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-07T18:58:08.621+09:00  INFO 24256 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-07T18:58:08.745+09:00  INFO 24256 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2739 ms
+2026-08-07T18:58:09.243+09:00  INFO 24256 --- [CardCapture-back] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-08-07T18:58:10.025+09:00  INFO 24256 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-07T18:58:10.045+09:00  INFO 24256 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 5.551 seconds (process running for 7.554)
+2026-08-07T18:58:24.641+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-07T18:58:24.641+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-07T18:58:24.644+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-07T18:58:25.950+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 565 ms
+2026-08-07T18:58:31.626+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 開始
+2026-08-07T18:58:31.631+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 開始
+2026-08-07T18:58:31.649+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 103 / suitLスペード s:1 / num: 2 numLab:2
+2026-08-07T18:58:31.649+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 104 / suitLスペード s:1 / num: 3 numLab:3
+2026-08-07T18:58:31.650+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / suitLスペード s:1 / num: 4 numLab:4
+2026-08-07T18:58:31.651+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / suitLスペード s:1 / num: 5 numLab:5
+2026-08-07T18:58:31.653+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / suitLスペード s:1 / num: 6 numLab:6
+2026-08-07T18:58:31.654+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / suitLスペード s:1 / num: 7 numLab:7
+2026-08-07T18:58:31.655+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / suitLスペード s:1 / num: 8 numLab:8
+2026-08-07T18:58:31.656+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / suitLスペード s:1 / num: 9 numLab:9
+2026-08-07T18:58:31.656+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / suitLスペード s:1 / num: 10 numLab:10
+2026-08-07T18:58:31.657+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / suitLスペード s:1 / num: 11 numLab:ジャック
+2026-08-07T18:58:31.657+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / suitLスペード s:1 / num: 12 numLab:クイーン
+2026-08-07T18:58:31.658+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / suitLスペード s:1 / num: 13 numLab:キング
+2026-08-07T18:58:31.658+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / suitLスペード s:1 / num: 14 numLab:エース
+2026-08-07T18:58:31.659+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 104 / suitLハート s:2 / num: 2 numLab:2
+2026-08-07T18:58:31.662+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / suitLハート s:2 / num: 3 numLab:3
+2026-08-07T18:58:31.662+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / suitLハート s:2 / num: 4 numLab:4
+2026-08-07T18:58:31.662+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / suitLハート s:2 / num: 5 numLab:5
+2026-08-07T18:58:31.663+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / suitLハート s:2 / num: 6 numLab:6
+2026-08-07T18:58:31.663+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / suitLハート s:2 / num: 7 numLab:7
+2026-08-07T18:58:31.664+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / suitLハート s:2 / num: 8 numLab:8
+2026-08-07T18:58:31.665+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / suitLハート s:2 / num: 9 numLab:9
+2026-08-07T18:58:31.666+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / suitLハート s:2 / num: 10 numLab:10
+2026-08-07T18:58:31.666+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / suitLハート s:2 / num: 11 numLab:ジャック
+2026-08-07T18:58:31.667+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / suitLハート s:2 / num: 12 numLab:クイーン
+2026-08-07T18:58:31.668+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / suitLハート s:2 / num: 13 numLab:キング
+2026-08-07T18:58:31.669+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / suitLハート s:2 / num: 14 numLab:エース
+2026-08-07T18:58:31.670+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 105 / suitLダイヤ s:3 / num: 2 numLab:2
+2026-08-07T18:58:31.672+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / suitLダイヤ s:3 / num: 3 numLab:3
+2026-08-07T18:58:31.673+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / suitLダイヤ s:3 / num: 4 numLab:4
+2026-08-07T18:58:31.673+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / suitLダイヤ s:3 / num: 5 numLab:5
+2026-08-07T18:58:31.673+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / suitLダイヤ s:3 / num: 6 numLab:6
+2026-08-07T18:58:31.674+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / suitLダイヤ s:3 / num: 7 numLab:7
+2026-08-07T18:58:31.674+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / suitLダイヤ s:3 / num: 8 numLab:8
+2026-08-07T18:58:31.675+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / suitLダイヤ s:3 / num: 9 numLab:9
+2026-08-07T18:58:31.676+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / suitLダイヤ s:3 / num: 10 numLab:10
+2026-08-07T18:58:31.676+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / suitLダイヤ s:3 / num: 11 numLab:ジャック
+2026-08-07T18:58:31.677+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / suitLダイヤ s:3 / num: 12 numLab:クイーン
+2026-08-07T18:58:31.677+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / suitLダイヤ s:3 / num: 13 numLab:キング
+2026-08-07T18:58:31.677+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 117 / suitLダイヤ s:3 / num: 14 numLab:エース
+2026-08-07T18:58:31.677+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / suitLクラブ s:4 / num: 2 numLab:2
+2026-08-07T18:58:31.678+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / suitLクラブ s:4 / num: 3 numLab:3
+2026-08-07T18:58:31.678+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 108 / suitLクラブ s:4 / num: 4 numLab:4
+2026-08-07T18:58:31.678+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 109 / suitLクラブ s:4 / num: 5 numLab:5
+2026-08-07T18:58:31.679+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 110 / suitLクラブ s:4 / num: 6 numLab:6
+2026-08-07T18:58:31.679+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 111 / suitLクラブ s:4 / num: 7 numLab:7
+2026-08-07T18:58:31.679+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 112 / suitLクラブ s:4 / num: 8 numLab:8
+2026-08-07T18:58:31.680+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 113 / suitLクラブ s:4 / num: 9 numLab:9
+2026-08-07T18:58:31.681+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 114 / suitLクラブ s:4 / num: 10 numLab:10
+2026-08-07T18:58:31.682+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 115 / suitLクラブ s:4 / num: 11 numLab:ジャック
+2026-08-07T18:58:31.683+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 116 / suitLクラブ s:4 / num: 12 numLab:クイーン
+2026-08-07T18:58:31.683+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 117 / suitLクラブ s:4 / num: 13 numLab:キング
+2026-08-07T18:58:31.684+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 118 / suitLクラブ s:4 / num: 14 numLab:エース
+2026-08-07T18:58:31.684+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 106 / suitLジョーカー s:5 / num: 1 numLab:1
+2026-08-07T18:58:31.684+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; makeCard :code; 107 / suitLジョーカー s:5 / num: 2 numLab:2
+2026-08-07T18:58:31.685+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] jp.co.ea.cardcapture.model.TrumpDeck     : createDeck; 終了
+2026-08-07T18:58:31.686+09:00  INFO 24256 --- [CardCapture-back] [http-nio-8080-exec-10] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 終了

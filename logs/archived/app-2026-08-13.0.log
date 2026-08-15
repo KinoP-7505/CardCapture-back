@@ -1,0 +1,590 @@
+2026-08-13T03:33:53.041+09:00  INFO 3996 --- [CardCapture-back] [RMI TCP Connection(18)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-08-13T03:33:53.576+09:00  INFO 3996 --- [CardCapture-back] [RMI TCP Connection(18)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-13T03:33:53.776+09:00  INFO 3996 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-13T03:34:27.636+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 22460 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-13T03:34:27.641+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-13T03:34:27.729+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-13T03:34:27.730+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-13T03:34:29.674+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-13T03:34:29.702+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-13T03:34:29.703+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-13T03:34:29.807+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2077 ms
+2026-08-13T03:34:30.093+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 開始
+2026-08-13T03:34:30.099+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 終了
+2026-08-13T03:34:30.459+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-08-13T03:34:31.447+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-13T03:34:31.465+09:00  INFO 22460 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 4.654 seconds (process running for 7.499)
+2026-08-13T03:34:39.629+09:00  INFO 22460 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-13T03:34:39.630+09:00  INFO 22460 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-13T03:34:39.635+09:00  INFO 22460 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-08-13T03:34:41.029+09:00  INFO 22460 --- [CardCapture-back] [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 642 ms
+2026-08-13T03:35:01.324+09:00 ERROR 22460 --- [CardCapture-back] [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.get(int)" because the return value of "jp.co.ea.cardcapture.controller.dto.ActionRequest.getSelected()" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.get(int)" because the return value of "jp.co.ea.cardcapture.controller.dto.ActionRequest.getSelected()" is null
+	at jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(CardCaptureController.java:145) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-08-13T03:36:06.600+09:00 ERROR 22460 --- [CardCapture-back] [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "selected" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "selected" is null
+	at jp.co.ea.cardcapture.service.CardCupturePlayService.checkActionCapture(CardCupturePlayService.java:216) ~[main/:na]
+	at jp.co.ea.cardcapture.controller.CardCaptureController.actionCapture(CardCaptureController.java:125) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-08-13T03:57:19.875+09:00  INFO 22460 --- [CardCapture-back] [RMI TCP Connection(32)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-08-13T03:57:20.117+09:00  INFO 22460 --- [CardCapture-back] [RMI TCP Connection(32)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-13T03:57:20.180+09:00  INFO 22460 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-13T04:00:22.068+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 26144 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-13T04:00:22.073+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-13T04:00:22.147+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-13T04:00:22.147+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-13T04:00:23.781+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-13T04:00:23.807+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-13T04:00:23.808+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-13T04:00:23.883+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1735 ms
+2026-08-13T04:00:24.052+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 開始
+2026-08-13T04:00:24.055+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 終了
+2026-08-13T04:00:24.728+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-13T04:00:24.738+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 3.76 seconds (process running for 7.03)
+2026-08-13T04:00:32.990+09:00  INFO 26144 --- [CardCapture-back] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-13T04:00:32.990+09:00  INFO 26144 --- [CardCapture-back] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-13T04:00:32.993+09:00  INFO 26144 --- [CardCapture-back] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-13T04:00:34.386+09:00  INFO 26144 --- [CardCapture-back] [http-nio-8080-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 584 ms
+2026-08-13T04:01:01.516+09:00  WARN 26144 --- [CardCapture-back] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<jp.co.ea.cardcapture.controller.dto.ActionResponse> jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(jp.co.ea.cardcapture.controller.dto.ActionRequest) with 3 errors: [Field error in object 'actionRequest' on field 'selected': rejected value [null]; codes [NotNull.actionRequest.selected,NotNull.selected,NotNull.java.util.List,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.selected,selected]; arguments []; default message [selected]]; default message [選択カードは必須です]] [Field error in object 'actionRequest' on field 'targetEnemy': rejected value [null]; codes [NotNull.actionRequest.targetEnemy,NotNull.targetEnemy,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.targetEnemy,targetEnemy]; arguments []; default message [targetEnemy]]; default message [対象敵カードは必須です]] [Field error in object 'actionRequest' on field 'actionCode': rejected value [null]; codes [NotNull.actionRequest.actionCode,NotNull.actionCode,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.actionCode,actionCode]; arguments []; default message [actionCode]]; default message [アクションコードは必須です]] ]
+2026-08-13T04:03:14.067+09:00  WARN 26144 --- [CardCapture-back] [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<jp.co.ea.cardcapture.controller.dto.ActionResponse> jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(jp.co.ea.cardcapture.controller.dto.ActionRequest) with 3 errors: [Field error in object 'actionRequest' on field 'selected': rejected value [null]; codes [NotNull.actionRequest.selected,NotNull.selected,NotNull.java.util.List,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.selected,selected]; arguments []; default message [selected]]; default message [選択カードは必須です]] [Field error in object 'actionRequest' on field 'targetEnemy': rejected value [null]; codes [NotNull.actionRequest.targetEnemy,NotNull.targetEnemy,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.targetEnemy,targetEnemy]; arguments []; default message [targetEnemy]]; default message [対象敵カードは必須です]] [Field error in object 'actionRequest' on field 'actionCode': rejected value [null]; codes [NotNull.actionRequest.actionCode,NotNull.actionCode,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.actionCode,actionCode]; arguments []; default message [actionCode]]; default message [アクションコードは必須です]] ]
+2026-08-13T04:03:31.408+09:00  WARN 26144 --- [CardCapture-back] [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<jp.co.ea.cardcapture.controller.dto.ActionResponse> jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(jp.co.ea.cardcapture.controller.dto.ActionRequest) with 3 errors: [Field error in object 'actionRequest' on field 'actionCode': rejected value [null]; codes [NotNull.actionRequest.actionCode,NotNull.actionCode,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.actionCode,actionCode]; arguments []; default message [actionCode]]; default message [アクションコードは必須です]] [Field error in object 'actionRequest' on field 'selected': rejected value [null]; codes [NotNull.actionRequest.selected,NotNull.selected,NotNull.java.util.List,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.selected,selected]; arguments []; default message [selected]]; default message [選択カードは必須です]] [Field error in object 'actionRequest' on field 'targetEnemy': rejected value [null]; codes [NotNull.actionRequest.targetEnemy,NotNull.targetEnemy,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.targetEnemy,targetEnemy]; arguments []; default message [targetEnemy]]; default message [対象敵カードは必須です]] ]
+2026-08-13T04:04:20.280+09:00  WARN 26144 --- [CardCapture-back] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<jp.co.ea.cardcapture.controller.dto.ActionResponse> jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(jp.co.ea.cardcapture.controller.dto.ActionRequest) with 3 errors: [Field error in object 'actionRequest' on field 'targetEnemy': rejected value [null]; codes [NotNull.actionRequest.targetEnemy,NotNull.targetEnemy,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.targetEnemy,targetEnemy]; arguments []; default message [targetEnemy]]; default message [対象敵カードは必須です]] [Field error in object 'actionRequest' on field 'actionCode': rejected value [null]; codes [NotNull.actionRequest.actionCode,NotNull.actionCode,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.actionCode,actionCode]; arguments []; default message [actionCode]]; default message [アクションコードは必須です]] [Field error in object 'actionRequest' on field 'selected': rejected value [null]; codes [NotNull.actionRequest.selected,NotNull.selected,NotNull.java.util.List,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.selected,selected]; arguments []; default message [selected]]; default message [選択カードは必須です]] ]
+2026-08-13T04:19:36.744+09:00  INFO 26144 --- [CardCapture-back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 25 class path changes (0 additions, 0 deletions, 25 modifications)
+2026-08-13T04:19:36.975+09:00  INFO 26144 --- [CardCapture-back] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-13T04:19:37.127+09:00  INFO 26144 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-13T04:19:37.864+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 26144 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-13T04:19:37.865+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-13T04:19:38.686+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-13T04:19:38.692+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-13T04:19:38.693+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-13T04:19:38.732+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 857 ms
+2026-08-13T04:19:40.137+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 開始
+2026-08-13T04:19:40.142+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 終了
+2026-08-13T04:19:40.423+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-13T04:19:40.431+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 2.667 seconds (process running for 1162.724)
+2026-08-13T04:19:40.437+09:00  INFO 26144 --- [CardCapture-back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-13T04:19:49.462+09:00  INFO 26144 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-13T04:19:49.462+09:00  INFO 26144 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-13T04:19:49.465+09:00  INFO 26144 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-13T04:19:49.493+09:00  WARN 26144 --- [CardCapture-back] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<jp.co.ea.cardcapture.controller.dto.ActionResponse> jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(jp.co.ea.cardcapture.controller.dto.ActionRequest) with 3 errors: [Field error in object 'actionRequest' on field 'actionCode': rejected value [null]; codes [NotNull.actionRequest.actionCode,NotNull.actionCode,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.actionCode,actionCode]; arguments []; default message [actionCode]]; default message [アクションコードは必須です]] [Field error in object 'actionRequest' on field 'targetEnemy': rejected value [null]; codes [NotNull.actionRequest.targetEnemy,NotNull.targetEnemy,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.targetEnemy,targetEnemy]; arguments []; default message [targetEnemy]]; default message [対象敵カードは必須です]] [Field error in object 'actionRequest' on field 'selected': rejected value [null]; codes [NotNull.actionRequest.selected,NotNull.selected,NotNull.java.util.List,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.selected,selected]; arguments []; default message [selected]]; default message [選択カードは必須です]] ]
+2026-08-13T04:22:25.740+09:00  INFO 26144 --- [CardCapture-back] [RMI TCP Connection(36)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-08-13T04:22:25.811+09:00  INFO 26144 --- [CardCapture-back] [RMI TCP Connection(36)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-13T04:22:25.830+09:00  INFO 26144 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-13T04:22:40.435+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 21472 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-13T04:22:40.443+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-13T04:22:40.599+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-13T04:22:40.601+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-13T04:22:42.368+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-13T04:22:42.399+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-13T04:22:42.400+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-13T04:22:42.480+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1876 ms
+2026-08-13T04:22:42.647+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 開始
+2026-08-13T04:22:42.650+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 終了
+2026-08-13T04:22:43.412+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-13T04:22:43.423+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 3.892 seconds (process running for 5.758)
+2026-08-13T04:22:48.498+09:00  INFO 21472 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-13T04:22:48.499+09:00  INFO 21472 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-13T04:22:48.501+09:00  INFO 21472 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-13T04:22:49.457+09:00  INFO 21472 --- [CardCapture-back] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 493 ms
+2026-08-13T04:23:08.157+09:00  WARN 21472 --- [CardCapture-back] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<jp.co.ea.cardcapture.controller.dto.ActionResponse> jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(jp.co.ea.cardcapture.controller.dto.ActionRequest) with 3 errors: [Field error in object 'actionRequest' on field 'targetEnemy': rejected value [null]; codes [NotNull.actionRequest.targetEnemy,NotNull.targetEnemy,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.targetEnemy,targetEnemy]; arguments []; default message [targetEnemy]]; default message [対象敵カードは必須です]] [Field error in object 'actionRequest' on field 'selected': rejected value [null]; codes [NotNull.actionRequest.selected,NotNull.selected,NotNull.java.util.List,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.selected,selected]; arguments []; default message [selected]]; default message [選択カードは必須です]] [Field error in object 'actionRequest' on field 'actionCode': rejected value [null]; codes [NotNull.actionRequest.actionCode,NotNull.actionCode,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.actionCode,actionCode]; arguments []; default message [actionCode]]; default message [アクションコードは必須です]] ]
+2026-08-13T04:27:09.670+09:00  INFO 21472 --- [CardCapture-back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 25 class path changes (0 additions, 0 deletions, 25 modifications)
+2026-08-13T04:27:09.873+09:00  INFO 21472 --- [CardCapture-back] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-13T04:27:09.977+09:00  INFO 21472 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-13T04:27:10.315+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 21472 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-13T04:27:10.316+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-13T04:27:10.766+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-13T04:27:10.768+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-13T04:27:10.769+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-13T04:27:10.796+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 475 ms
+2026-08-13T04:27:10.871+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 開始
+2026-08-13T04:27:10.875+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 終了
+2026-08-13T04:27:11.061+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-13T04:27:11.068+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 0.798 seconds (process running for 273.402)
+2026-08-13T04:27:11.074+09:00  INFO 21472 --- [CardCapture-back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-13T04:27:16.623+09:00  INFO 21472 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-13T04:27:16.624+09:00  INFO 21472 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-13T04:27:16.626+09:00  INFO 21472 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-13T04:27:17.217+09:00  INFO 21472 --- [CardCapture-back] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 279 ms
+2026-08-13T04:27:31.880+09:00  WARN 21472 --- [CardCapture-back] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<jp.co.ea.cardcapture.controller.dto.ActionResponse> jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(jp.co.ea.cardcapture.controller.dto.ActionRequest) with 3 errors: [Field error in object 'actionRequest' on field 'actionCode': rejected value [null]; codes [NotNull.actionRequest.actionCode,NotNull.actionCode,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.actionCode,actionCode]; arguments []; default message [actionCode]]; default message [アクションコードは必須です]] [Field error in object 'actionRequest' on field 'targetEnemy': rejected value [null]; codes [NotNull.actionRequest.targetEnemy,NotNull.targetEnemy,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.targetEnemy,targetEnemy]; arguments []; default message [targetEnemy]]; default message [対象敵カードは必須です]] [Field error in object 'actionRequest' on field 'selected': rejected value [null]; codes [NotNull.actionRequest.selected,NotNull.selected,NotNull.java.util.List,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.selected,selected]; arguments []; default message [selected]]; default message [選択カードは必須です]] ]
+2026-08-13T04:27:51.838+09:00  INFO 21472 --- [CardCapture-back] [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-08-13T04:27:51.839+09:00  INFO 21472 --- [CardCapture-back] [RMI TCP Connection(17)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-13T04:27:51.847+09:00  INFO 21472 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-13T04:28:04.275+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 20104 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-13T04:28:04.279+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-13T04:28:04.359+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-13T04:28:04.359+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-13T04:28:05.802+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-13T04:28:05.836+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-13T04:28:05.836+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-13T04:28:05.910+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1550 ms
+2026-08-13T04:28:06.054+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 開始
+2026-08-13T04:28:06.058+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 終了
+2026-08-13T04:28:06.737+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-13T04:28:06.750+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 3.17 seconds (process running for 4.684)
+2026-08-13T04:28:14.653+09:00  INFO 20104 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-13T04:28:14.654+09:00  INFO 20104 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-13T04:28:14.656+09:00  INFO 20104 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-13T04:28:14.840+09:00  WARN 20104 --- [CardCapture-back] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<jp.co.ea.cardcapture.controller.dto.ActionResponse> jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(jp.co.ea.cardcapture.controller.dto.ActionRequest) with 3 errors: [Field error in object 'actionRequest' on field 'actionCode': rejected value [null]; codes [NotNull.actionRequest.actionCode,NotNull.actionCode,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.actionCode,actionCode]; arguments []; default message [actionCode]]; default message [アクションコードは必須です]] [Field error in object 'actionRequest' on field 'targetEnemy': rejected value [null]; codes [NotNull.actionRequest.targetEnemy,NotNull.targetEnemy,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.targetEnemy,targetEnemy]; arguments []; default message [targetEnemy]]; default message [対象敵カードは必須です]] [Field error in object 'actionRequest' on field 'selected': rejected value [null]; codes [NotNull.actionRequest.selected,NotNull.selected,NotNull.java.util.List,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.selected,selected]; arguments []; default message [selected]]; default message [選択カードは必須です]] ]
+2026-08-13T04:31:03.836+09:00  INFO 20104 --- [CardCapture-back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 25 class path changes (0 additions, 0 deletions, 25 modifications)
+2026-08-13T04:31:03.922+09:00  INFO 20104 --- [CardCapture-back] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-13T04:31:04.018+09:00  INFO 20104 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-13T04:31:04.394+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 20104 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-13T04:31:04.394+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-13T04:31:04.941+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-13T04:31:04.944+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-13T04:31:04.944+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-13T04:31:04.974+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 574 ms
+2026-08-13T04:31:06.363+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 開始
+2026-08-13T04:31:06.368+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 終了
+2026-08-13T04:31:06.564+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-13T04:31:06.570+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 2.231 seconds (process running for 184.504)
+2026-08-13T04:31:06.574+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-13T04:31:15.899+09:00  INFO 20104 --- [CardCapture-back] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-13T04:31:15.899+09:00  INFO 20104 --- [CardCapture-back] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-13T04:31:15.900+09:00  INFO 20104 --- [CardCapture-back] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-13T04:31:16.102+09:00 ERROR 20104 --- [CardCapture-back] [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "jp.co.ea.cardcapture.model.GameDeck.getDeck()" because "enemyArea" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "jp.co.ea.cardcapture.model.GameDeck.getDeck()" because "enemyArea" is null
+	at jp.co.ea.cardcapture.service.CardCupturePlayService.checkActionSeal(CardCupturePlayService.java:261) ~[main/:na]
+	at jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(CardCaptureController.java:138) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-08-13T04:31:32.899+09:00  WARN 20104 --- [CardCapture-back] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<jp.co.ea.cardcapture.controller.dto.ActionResponse> jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(jp.co.ea.cardcapture.controller.dto.ActionRequest): [Field error in object 'actionRequest' on field 'selected': rejected value [[102, 103]]; codes [ValidActionRequest.actionRequest.selected,ValidActionRequest.selected,ValidActionRequest.java.util.List,ValidActionRequest]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.selected,selected]; arguments []; default message [selected]]; default message [手札選択枚数エラー]] ]
+2026-08-13T04:32:09.338+09:00  WARN 20104 --- [CardCapture-back] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<jp.co.ea.cardcapture.controller.dto.ActionResponse> jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(jp.co.ea.cardcapture.controller.dto.ActionRequest): [Field error in object 'actionRequest' on field 'targetEnemy': rejected value [111]; codes [ValidActionRequest.actionRequest.targetEnemy,ValidActionRequest.targetEnemy,ValidActionRequest.java.lang.Integer,ValidActionRequest]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [actionRequest.targetEnemy,targetEnemy]; arguments []; default message [targetEnemy]]; default message [封印アクションの場合、絵札は選択できません]] ]
+2026-08-13T04:53:10.695+09:00 ERROR 20104 --- [CardCapture-back] [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "jp.co.ea.cardcapture.model.GameDeck.getDeck()" because "enemyArea" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "jp.co.ea.cardcapture.model.GameDeck.getDeck()" because "enemyArea" is null
+	at jp.co.ea.cardcapture.service.CardCupturePlayService.checkActionSeal(CardCupturePlayService.java:261) ~[main/:na]
+	at jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(CardCaptureController.java:138) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-08-13T04:57:43.432+09:00 ERROR 20104 --- [CardCapture-back] [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "jp.co.ea.cardcapture.model.GameDeck.getDeck()" because "enemyArea" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "jp.co.ea.cardcapture.model.GameDeck.getDeck()" because "enemyArea" is null
+	at jp.co.ea.cardcapture.service.CardCupturePlayService.checkActionSeal(CardCupturePlayService.java:261) ~[main/:na]
+	at jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(CardCaptureController.java:138) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-08-13T04:58:00.700+09:00  INFO 20104 --- [CardCapture-back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 25 class path changes (0 additions, 0 deletions, 25 modifications)
+2026-08-13T04:58:00.757+09:00  INFO 20104 --- [CardCapture-back] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-13T04:58:00.779+09:00  INFO 20104 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-13T04:58:01.389+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 20104 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-13T04:58:01.390+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-13T04:58:01.931+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-13T04:58:01.934+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-13T04:58:01.935+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-13T04:58:01.982+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 583 ms
+2026-08-13T04:58:02.055+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 開始
+2026-08-13T04:58:02.057+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 終了
+2026-08-13T04:58:02.249+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-13T04:58:02.257+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 0.992 seconds (process running for 1800.19)
+2026-08-13T04:58:02.258+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-13T04:58:15.867+09:00  INFO 20104 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-13T04:58:15.868+09:00  INFO 20104 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-13T04:58:15.872+09:00  INFO 20104 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-08-13T04:58:15.918+09:00 ERROR 20104 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "jp.co.ea.cardcapture.model.GameDeck.getDeck()" because the return value of "jp.co.ea.cardcapture.component.PlayerSession.getEnemyArea()" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "jp.co.ea.cardcapture.model.GameDeck.getDeck()" because the return value of "jp.co.ea.cardcapture.component.PlayerSession.getEnemyArea()" is null
+	at jp.co.ea.cardcapture.service.CardCupturePlayService.setTestSession(CardCupturePlayService.java:271) ~[main/:na]
+	at jp.co.ea.cardcapture.service.CardCupturePlayService.checkActionSeal(CardCupturePlayService.java:258) ~[main/:na]
+	at jp.co.ea.cardcapture.controller.CardCaptureController.actionSeal(CardCaptureController.java:138) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-08-13T05:03:51.167+09:00  INFO 20104 --- [CardCapture-back] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 25 class path changes (0 additions, 0 deletions, 25 modifications)
+2026-08-13T05:03:51.208+09:00  INFO 20104 --- [CardCapture-back] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-13T05:03:51.231+09:00  INFO 20104 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-13T05:03:51.517+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 20104 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-13T05:03:51.518+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-13T05:03:52.008+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-13T05:03:52.011+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-13T05:03:52.011+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-13T05:03:52.034+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 510 ms
+2026-08-13T05:03:53.005+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 開始
+2026-08-13T05:03:53.008+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 終了
+2026-08-13T05:03:53.180+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-13T05:03:53.186+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 1.729 seconds (process running for 2151.119)
+2026-08-13T05:03:53.188+09:00  INFO 20104 --- [CardCapture-back] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-08-13T05:22:54.955+09:00  INFO 20104 --- [CardCapture-back] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-13T05:22:54.987+09:00  INFO 20104 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-13T05:22:55.094+09:00  INFO 20104 --- [CardCapture-back] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 105 ms
+2026-08-13T09:24:47.478+09:00  INFO 20104 --- [CardCapture-back] [RMI TCP Connection(126)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-08-13T09:24:47.543+09:00  INFO 20104 --- [CardCapture-back] [RMI TCP Connection(126)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-13T09:24:47.567+09:00  INFO 20104 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-08-13T12:01:14.341+09:00  INFO 22928 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 22928 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-13T12:01:14.345+09:00  INFO 22928 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-13T12:01:14.639+09:00  INFO 22928 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-13T12:01:14.640+09:00  INFO 22928 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-13T12:01:32.572+09:00  INFO 28636 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Starting CardCaptureBackApplication using Java 21.0.9 with PID 28636 (C:\kino-work\SpringBoot\CardCapture-back\bin\main started by NPC-61 in C:\kino-work\SpringBoot\CardCapture-back)
+2026-08-13T12:01:32.576+09:00  INFO 28636 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-13T12:01:32.642+09:00  INFO 28636 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-08-13T12:01:32.642+09:00  INFO 28636 --- [CardCapture-back] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-08-13T12:01:34.174+09:00  INFO 28636 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-08-13T12:01:34.217+09:00  INFO 28636 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-13T12:01:34.218+09:00  INFO 28636 --- [CardCapture-back] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-13T12:01:34.363+09:00  INFO 28636 --- [CardCapture-back] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1720 ms
+2026-08-13T12:01:34.787+09:00  INFO 28636 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 開始
+2026-08-13T12:01:34.793+09:00  INFO 28636 --- [CardCapture-back] [restartedMain] j.c.e.c.service.GlobalStateService       : createDeck; 終了
+2026-08-13T12:01:35.551+09:00  INFO 28636 --- [CardCapture-back] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-08-13T12:01:35.560+09:00  INFO 28636 --- [CardCapture-back] [restartedMain] j.c.e.c.CardCaptureBackApplication       : Started CardCaptureBackApplication in 3.676 seconds (process running for 5.095)
+2026-08-13T12:06:45.128+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-13T12:06:45.139+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-13T12:06:45.188+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 48 ms
+2026-08-13T12:06:53.238+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: init 開始
+2026-08-13T12:06:53.319+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 終了
+2026-08-13T12:06:53.320+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: gameStart 開始
+2026-08-13T12:06:53.322+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: gameStart: EnemyArea枚数:4
+2026-08-13T12:06:53.322+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: gameStart: playerHands枚数:4
+2026-08-13T12:06:53.323+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: gameStart 終了
+2026-08-13T12:06:53.326+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; 開始
+2026-08-13T12:06:53.327+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; EnemyDeck:36
+2026-08-13T12:06:53.328+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; 盤面操作後 EnemyDeck:36
+2026-08-13T12:06:53.329+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; 盤面操作後 enemyArea:0
+2026-08-13T12:06:53.329+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; 補充後 EnemyDeck:32
+2026-08-13T12:06:53.330+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; 補充後 enemyArea:4
+2026-08-13T12:06:53.330+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; 終了
+2026-08-13T12:06:53.331+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; ディスカード後Pカード枚数:16
+2026-08-13T12:06:53.332+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; ディスカード後playerHands:0
+2026-08-13T12:07:00.744+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; 補充後Pカード枚数:16
+2026-08-13T12:07:00.744+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; 補充後手札枚数:4
+2026-08-13T12:07:00.745+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; 補充後捨て場枚数:6
+2026-08-13T12:07:00.745+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; 補充後山札枚数:6
+2026-08-13T12:07:00.745+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-1] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; ドロー後playerHands:4
+2026-08-13T12:07:36.788+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-5] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: init 開始
+2026-08-13T12:07:36.856+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-5] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 終了
+2026-08-13T12:07:36.857+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-5] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: gameStart 開始
+2026-08-13T12:07:36.857+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-5] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: gameStart: EnemyArea枚数:4
+2026-08-13T12:07:36.857+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-5] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: gameStart: playerHands枚数:4
+2026-08-13T12:07:36.857+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-5] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: gameStart 終了
+2026-08-13T12:07:57.668+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: init 開始
+2026-08-13T12:07:57.750+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService; init 終了
+2026-08-13T12:07:57.750+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: gameStart 開始
+2026-08-13T12:07:57.751+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: gameStart: EnemyArea枚数:4
+2026-08-13T12:07:57.751+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: gameStart: playerHands枚数:4
+2026-08-13T12:07:57.752+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCuptureInitService   : CardCuptureInitService: gameStart 終了
+2026-08-13T12:07:57.753+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; 開始
+2026-08-13T12:07:57.753+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; EnemyDeck:36
+2026-08-13T12:07:57.753+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; 盤面操作後 EnemyDeck:36
+2026-08-13T12:07:57.754+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; 盤面操作後 enemyArea:0
+2026-08-13T12:07:57.754+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; 補充後 EnemyDeck:32
+2026-08-13T12:07:57.755+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; 補充後 enemyArea:4
+2026-08-13T12:07:57.755+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: enemyPhase; 終了
+2026-08-13T12:07:57.756+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; ディスカード後Pカード枚数:16
+2026-08-13T12:07:57.756+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; ディスカード後playerHands:0
+2026-08-13T12:08:07.437+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; 補充後Pカード枚数:16
+2026-08-13T12:08:07.438+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; 補充後手札枚数:4
+2026-08-13T12:08:07.438+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; 補充後捨て場枚数:6
+2026-08-13T12:08:07.438+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; 補充後山札枚数:6
+2026-08-13T12:08:07.439+09:00  INFO 28636 --- [CardCapture-back] [http-nio-8080-exec-6] j.c.e.c.service.CardCupturePlayService   : CardCupturePlayService: disCardAndDrowPhase; ドロー後playerHands:4
+2026-08-13T12:08:21.020+09:00 ERROR 28636 --- [CardCapture-back] [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1] with root cause
+
+java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302) ~[na:na]
+	at java.base/java.util.Objects.checkIndex(Objects.java:385) ~[na:na]
+	at java.base/java.util.ArrayList.get(ArrayList.java:427) ~[na:na]
+	at jp.co.ea.cardcapture.controller.CardCaptureController.actionBlowAway(CardCaptureController.java:170) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-08-13T12:08:52.131+09:00  INFO 28636 --- [CardCapture-back] [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-08-13T12:08:52.155+09:00  INFO 28636 --- [CardCapture-back] [RMI TCP Connection(17)-127.0.0.1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-13T12:08:52.186+09:00  INFO 28636 --- [CardCapture-back] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
