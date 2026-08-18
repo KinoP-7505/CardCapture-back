@@ -207,6 +207,8 @@ public class CardCupturePlayService {
 	 * @return アクション結果
 	 */
 	public boolean checkActionCapture(GameCard targetEnemy, List<GameCard> selected) {
+		
+		log.info("CardCupturePlayService: checkActionCapture: 捕獲アクションチェック 開始" );
 
 		int numberTotal = 0;
 		int maxNumber = 0;
@@ -246,6 +248,8 @@ public class CardCupturePlayService {
 		// ジョーカー枚数を加算
 		boolean isSucces = numberTotal + (maxNumber * numberJoker) >= (targetEnemy.getNumber());
 
+		log.info("CardCupturePlayService: checkActionCapture: 捕獲アクションチェック 終了" );
+		
 		// 結果を返却
 		return isSucces;
 	}
@@ -255,13 +259,14 @@ public class CardCupturePlayService {
 	 * @return アクション結果
 	 */
 	public PlayerSession excecuteAction(Integer actionCode, GameCard targetEnemy, List<GameCard> selected) {
+		
+		log.info("CardCupturePlayService: excecuteAction: アクション実行 開始" );
 
-		setTestSession();
+//		setTestSession();
 
 		GameDeck enemyDeck = pSession.getEnemyDeck();
 		GameDeck enemyArea = pSession.getEnemyArea();
 		GameDeck playerHand = pSession.getPlayerHands();
-		GameDeck discard = pSession.getDiscards();
 
 		// エネミーカードの移動先
 		GameDeck eTarget = null;
@@ -294,6 +299,8 @@ public class CardCupturePlayService {
 			// 選択Cardを移動
 			CardCaptureUtility.deckCardMove(card, playerHand, pTarget);
 		}
+		
+		log.info("CardCupturePlayService: excecuteAction: アクション実行 終了" );
 
 		return pSession;
 	}
@@ -305,8 +312,10 @@ public class CardCupturePlayService {
 	 * @return アクション結果
 	 */
 	public boolean checkActionSeal(GameCard targetEnemy, List<GameCard> selected) {
+		
+		log.info("CardCupturePlayService: checkActionSeal: 封印アクションチェック 開始" );
 
-		setTestSession();
+//		setTestSession();
 
 		// 封印チェック
 		// 対象カードはEnemyAreaの最前であること
@@ -316,6 +325,8 @@ public class CardCupturePlayService {
 
 		// 選択カードは数字カード
 		boolean isNumber = selected.get(0).isNumberCard();
+
+		log.info("CardCupturePlayService: checkActionSeal: 封印アクションチェック 終了" );
 
 		// チェックOKであること
 		return isFront && isNumber;

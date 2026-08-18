@@ -40,5 +40,8 @@ public class PlayerSession {
 	// アクション実行チェック結果
 	private boolean canExecuteAction;
 	
+	// 処理順序
+	private int processState = 0;
+	
 
 }

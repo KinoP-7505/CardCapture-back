@@ -8,21 +8,21 @@ import lombok.Data;
 
 @Data
 public class CardCaptureResponse {
+	
+	/**
+	 * 処理状態
+	 */
+	private int processState;
 
 	/**
-	 * エネミーデッキ
+	 * プレイヤーデッキ
 	 */
-	private GameDeck enemyDeck;
+	//	private GameDeck playerDeck;
 
 	/**
 	 * エネミーエリア
 	 */
 	private GameDeck enemyArea;
-
-	/**
-	 * プレイヤーデッキ
-	 */
-	private GameDeck playerDeck;
 
 	/**
 	 * プレイヤー手札
@@ -32,12 +32,17 @@ public class CardCaptureResponse {
 	/**
 	 * 現在ラウンド数
 	 */
-	private int round;
+	private int rounds;
 
 	/**
-	 * 捨て札枚数
+	 * エネミーデッキ枚数
 	 */
-	private int discardSize;
+	private int enemyDeckSize;
+
+	/**
+	 * プレイヤーデッキ枚数
+	 */
+	private int playerDeckSize;
 
 	/**
 	 * 封印枚数
@@ -45,18 +50,19 @@ public class CardCaptureResponse {
 	private int sealAreaSize;
 
 	/**
-	 * プレイヤーデッキ枚数
+	 * 捨て札枚数
 	 */
-	private int playerDeckSize;
-	
+	private int discardSize;
+
 	// ゲーム状態
 	private String playState;
-	
+
 	// 手札の絵札数
 	private int numFacePlayer = 0;
+
 	// EnemyAreaの絵札数
 	private int numFaceEnemy = 0;
-	
+
 	//捕獲判定
 	private List<Boolean> canCaptureCards = new ArrayList<Boolean>();
 	// 封印判定

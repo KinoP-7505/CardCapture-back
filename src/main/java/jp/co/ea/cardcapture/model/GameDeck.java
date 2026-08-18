@@ -73,7 +73,7 @@ public class GameDeck {
 		return deck.get(0);
 	}
 	
-	public Integer size() {
+	public int size() {
 		return deck.size();
 	}
 

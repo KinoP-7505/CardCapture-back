@@ -3,6 +3,7 @@ package jp.co.ea.cardcapture.service;
 import org.springframework.stereotype.Service;
 
 import jp.co.ea.cardcapture.component.PlayerSession;
+import jp.co.ea.cardcapture.controller.dto.InitAppResponse;
 import jp.co.ea.cardcapture.controller.dto.InitGameRes;
 import jp.co.ea.cardcapture.model.GameCard;
 import jp.co.ea.cardcapture.model.GameDeck;
@@ -19,11 +20,24 @@ public class CardCuptureInitService {
 	// プレイヤー情報（セッション）
 	private final PlayerSession pSession;
 
-	public InitGameRes init() {
+	public InitAppResponse initApp() {
+		log.info("CardCuptureInitService: appInit 開始");
 
-		log.info("CardCuptureInitService: init 開始");
+		InitAppResponse response = new InitAppResponse();
+		response.setTrumpDeck(state.getDeck());
 
-		InitGameRes response = new InitGameRes();
+		log.info("CardCuptureInitService: appInit 終了");
+
+		return response;
+	}
+
+	/**
+	 * ゲーム開始処理
+	 * @return 
+	 */
+	public PlayerSession initGame() {
+
+		log.info("CardCuptureInitService: initGame 開始");
 
 		// EnemyDeck、PlayerDeck初期化
 		GameDeck playerDeck = new GameDeck("PlayerDeck");
@@ -53,20 +67,54 @@ public class CardCuptureInitService {
 				CardCaptureUtility.deckCardMove(pCard, enemyDeck, playerDeck);
 			}
 		}
-
 		// デッキシャッフル
 		enemyDeck.shuffle();
 		playerDeck.shuffle();
 
+		log.info("CardCuptureInitService: initGame: PlayerDeck、EnemyDeck作成");
+
+		// 盤面の作成
+		// EnemyArea作成
+		GameDeck enemyArea = new GameDeck("enemyArea");
+		for (int i = 0; i < 4; i++) {
+			// EnemyDeckのTopからドロー、EnemyAreaに追加
+			var card = enemyDeck.lookTop();
+			// TOPカードがある場合
+			if (card != null) {
+				CardCaptureUtility.deckCardMove(card, enemyDeck, enemyArea);
+			}
+		}
+		log.info("CardCuptureInitService: initGame: gameStart: EnemyArea作成　枚数:" + enemyArea.size());
+
+		// PlayerHandsの作成
+		GameDeck playerHands = new GameDeck("playerHands");
+		for (int i = 0; i < 4; i++) {
+			// PlayerDeckのTopからドロー、PlayerHandsに追加
+			var card = playerDeck.lookTop();
+			// TOPカードがある場合
+			if (card != null) {
+				CardCaptureUtility.deckCardMove(card, playerDeck, playerHands);
+			}
+		}
+		log.info("CardCuptureInitService: initGame: playerHands作成　枚数:" + playerHands.size());
+
+		// 捨て場作成
+		GameDeck discards = new GameDeck("discards");
+		// 封印デッキ作成
+		GameDeck SealArea = new GameDeck("SealArea");
+		log.info("CardCuptureInitService: initGame: 捨て場、封印デッキ作成");
+
 		// セッション格納、レスポンス設定
 		pSession.setEnemyDeck(enemyDeck);
 		pSession.setPlayerDeck(playerDeck);
-		response.setEnemyDeck(enemyDeck);
-		response.setPlayerDeck(playerDeck);
+		pSession.setEnemyArea(enemyArea);
+		pSession.setPlayerHands(playerHands);
+		pSession.setDiscards(discards);
+		pSession.setSealArea(SealArea);
 
-		log.info("CardCuptureInitService; init 終了");
+		log.info("CardCuptureInitService; initGame: 終了");
 
-		return response;
+		return pSession;
 	}
 
 	public InitGameRes gameStart() {

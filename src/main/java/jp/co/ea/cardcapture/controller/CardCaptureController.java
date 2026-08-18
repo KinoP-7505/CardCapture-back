@@ -2,10 +2,13 @@ package jp.co.ea.cardcapture.controller;
 
 import java.util.ArrayList;
 
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,12 +21,14 @@ import jp.co.ea.cardcapture.config.CardCaptureConstant;
 import jp.co.ea.cardcapture.controller.dto.ActionRequest;
 import jp.co.ea.cardcapture.controller.dto.ActionResponse;
 import jp.co.ea.cardcapture.controller.dto.CardCaptureResponse;
+import jp.co.ea.cardcapture.controller.dto.InitAppResponse;
 import jp.co.ea.cardcapture.controller.dto.InitGameRes;
 import jp.co.ea.cardcapture.model.GameCard;
 import jp.co.ea.cardcapture.model.GameDeck;
 import jp.co.ea.cardcapture.service.CardCuptureInitService;
 import jp.co.ea.cardcapture.service.CardCupturePlayService;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 
@@ -35,9 +40,11 @@ import lombok.Data;
  * 
  */
 @RestController
+@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
 @RequestMapping("/api/cardcapture/")
 @Tag(name = "CardCaptur API", description = "CardCaptureゲームで使用するAPI")
 @Data
+@Slf4j
 public class CardCaptureController {
 
 	// プレイヤーセッションクラス
@@ -49,39 +56,69 @@ public class CardCaptureController {
 	// ゲームプレイサービス
 	private final CardCupturePlayService ccPlayService;
 
+	@Operation(summary = "アプリケーション初期化", description = "トランプカード情報、定数")
+	@GetMapping("/initApp")
+	public ResponseEntity<InitAppResponse> initApp() {
+
+		var response = ccinitService.initApp();
+
+		return ResponseEntity.status(HttpStatus.OK).body(response);
+	}
+
 	@Operation(summary = "初期ゲームの作成", description = "ゲーム開始時Deckを作成")
 	@PostMapping("/initGame")
 	public ResponseEntity<InitGameRes> initGame() {
 		var response = new InitGameRes();
 
-		response = ccinitService.init();
+		// response = ccinitService.init();
 
 		response = ccinitService.gameStart();
 
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
 
-	@Operation(summary = "ゲーム開始", description = "ゲーム開始テスト")
-	@PostMapping("/startGameTest")
-	public ResponseEntity<CardCaptureResponse> startGameTest() {
-		var deckres = new InitGameRes();
+	@Operation(summary = "ラウンド開始", description = "ラウンド開始")
+	@GetMapping("/startRound")
+	public ResponseEntity<CardCaptureResponse> startRound(HttpSession session) {
+//		var deckres = new InitGameRes();
+		
+		log.info("executeAction Session ID: {}", session.getId());
+		
+		PlayerSession initDecks = null;
+		
+		// ゲーム開始時の場合
+		if (pSession.getRounds() == 1) {
+			initDecks = ccinitService.initGame();
+		} else {
+			// ラウンド＋１
+			pSession.setRounds(pSession.getRounds() + 1);
+			// エネミーフェイズ
+			ccPlayService.enemyPhase();
+		}
 
-		deckres = ccinitService.init();
-
-		deckres = ccinitService.gameStart();
+//		deckres = ccinitService.gameStart();
 
 		var response = new CardCaptureResponse();
 
-		ccPlayService.enemyPhase();
 
-		var list = new ArrayList<GameCard>();
-		PlayerSession playData = ccPlayService.disCardAndDrowPhase(list);
+		// プレイヤーディスカード＆ドロー
+//		var list = new ArrayList<GameCard>();
+//		PlayerSession playData = ccPlayService.disCardAndDrowPhase(list);
+		
+		PlayerSession playData = pSession;
 
-		response.setEnemyDeck(playData.getEnemyDeck());
+		// デッキ
 		response.setEnemyArea(playData.getEnemyArea());
-		response.setPlayerDeck(playData.getPlayerDeck());
 		response.setPlayerHands(playData.getPlayerHands());
-		response.setDiscardSize(1);
+		// 表示情報
+		response.setRounds(playData.getRounds());
+		response.setEnemyDeckSize(playData.getEnemyDeck().size());
+		response.setSealAreaSize(playData.getSealArea().size());
+		response.setPlayerDeckSize(playData.getPlayerDeck().size());
+		response.setDiscardSize(playData.getDiscards().size());
+		
+		// プロセス２へ
+		response.setProcessState(2);
 
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
@@ -92,7 +129,7 @@ public class CardCaptureController {
 
 		var deckres = new InitGameRes();
 
-		deckres = ccinitService.init();
+//		deckres = ccinitService.init();
 
 		deckres = ccinitService.gameStart();
 
@@ -105,9 +142,9 @@ public class CardCaptureController {
 
 		var response = new CardCaptureResponse();
 
-		response.setEnemyDeck(playData.getEnemyDeck());
+//		response.setEnemyDeck(playData.getEnemyDeck());
 		response.setEnemyArea(playData.getEnemyArea());
-		response.setPlayerDeck(playData.getPlayerDeck());
+//		response.setPlayerDeck(playData.getPlayerDeck());
 		response.setPlayerHands(playData.getPlayerHands());
 		response.setDiscardSize(1);
 
@@ -122,7 +159,11 @@ public class CardCaptureController {
 	@Operation(summary = "アクション実行", description = "プレイヤーアクション判定・実行")
 	@PostMapping("/executeAction")
 	public ResponseEntity<ActionResponse> executeAction(
-			@Valid @RequestBody ActionRequest request) {
+			@Valid @RequestBody ActionRequest request, HttpSession session) {
+		log.info("CardCaptureController: executeAction: アクション実行 開始" );
+		
+		log.info("executeAction Session ID: {}", session.getId());
+
 		var response = new ActionResponse();
 
 		// リクエスト変換
@@ -147,6 +188,8 @@ public class CardCaptureController {
 
 		// チェックOKの場合、アクション実行
 		if (isExecute) {
+			log.info("CardCaptureController: executeAction: アクション実行 チェックOK" );
+
 			// カードの移動先は前処理にて決定済み
 			PlayerSession pSession = ccPlayService.excecuteAction(actionCode, target, selected.getDeck());
 			// レスポンスに結果をセット
@@ -156,6 +199,10 @@ public class CardCaptureController {
 			response.setDiscards(pSession.getDiscards());
 			response.setSealArea(pSession.getSealArea());
 		}
+
+		log.info("CardCaptureController: executeAction: アクション実行 終了" );
+		
+//		レスポンス内容を確認
 
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
