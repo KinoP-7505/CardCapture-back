@@ -30,5 +30,25 @@ public record CardCaptureConstant() {
 	public static final Integer ACTION_BLOWAWAY = 3;
 	/** 投了アクション */
 	public static final Integer ACTION_CONCEDE = 4;
+	/** ディスカードアクション */
+	public static final Integer ACTION_DISCARD = 5;
+	
+	// ゲーム状態コード
+	/** ゲーム前 **/
+	public static final Integer GAMESTATE_INIT = 0;
+	/** フェイズ：セットアップ **/
+	public static final Integer GAMESTATE_SETUP = 1;
+	/** フェイズ：セットアップ **/
+	public static final Integer GAMESTATE_ACTION_SELECT = 2;
+	/** フェイズ：ディスカード **/
+	public static final Integer GAMESTATE_DISCARD = 5;
+	
+	
+	/** ゲーム中 **/
+	public static final Integer GAMESTATE_PLAYING = 11;
+	/** ゲーム勝利 **/
+	public static final Integer GAMESTATE_WIN = 8;
+	/** ゲーム敗北 **/
+	public static final Integer GAMESTATE_DEFEAT= 9;
 	
 }

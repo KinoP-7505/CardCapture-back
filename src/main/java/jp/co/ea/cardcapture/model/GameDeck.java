@@ -73,8 +73,19 @@ public class GameDeck {
 		return deck.get(0);
 	}
 	
+	/**
+	 * デッキサイズ取得
+	 */
 	public int size() {
 		return deck.size();
+	}
+	
+	/**
+	 * デッキからcodeのカードを削除
+	 * @param cardCode 対象カードコード
+	 */
+	public void removeCard(Integer cardCode) {
+		deck.removeIf(card -> card.getCode() == cardCode);
 	}
 
 }

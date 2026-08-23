@@ -1,7 +1,5 @@
 package jp.co.ea.cardcapture.controller;
 
-import java.util.ArrayList;
-
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
@@ -84,77 +82,69 @@ public class CardCaptureController {
 		
 		log.info("executeAction Session ID: {}", session.getId());
 		
-		PlayerSession initDecks = null;
+//		PlayerSession initDecks = null;
 		
 		// ゲーム開始時の場合
 		if (pSession.getRounds() == 1) {
-			initDecks = ccinitService.initGame();
+			ccinitService.initGame();
 		} else {
-			// ラウンド＋１
-			pSession.setRounds(pSession.getRounds() + 1);
-			// エネミーフェイズ
+			// カード補充
 			ccPlayService.enemyPhase();
+			ccPlayService.drawPhase();
 		}
 
-//		deckres = ccinitService.gameStart();
-
 		var response = new CardCaptureResponse();
-
-
-		// プレイヤーディスカード＆ドロー
-//		var list = new ArrayList<GameCard>();
-//		PlayerSession playData = ccPlayService.disCardAndDrowPhase(list);
 		
-		PlayerSession playData = pSession;
+//		PlayerSession playData = pSession;
 
 		// デッキ
-		response.setEnemyArea(playData.getEnemyArea());
-		response.setPlayerHands(playData.getPlayerHands());
+		response.setEnemyArea(pSession.getEnemyArea());
+		response.setPlayerHands(pSession.getPlayerHands());
 		// 表示情報
-		response.setRounds(playData.getRounds());
-		response.setEnemyDeckSize(playData.getEnemyDeck().size());
-		response.setSealAreaSize(playData.getSealArea().size());
-		response.setPlayerDeckSize(playData.getPlayerDeck().size());
-		response.setDiscardSize(playData.getDiscards().size());
+		response.setRounds(pSession.getRounds());
+		response.setEnemyDeckSize(pSession.getEnemyDeck().size());
+		response.setSealAreaSize(pSession.getSealArea().size());
+		response.setPlayerDeckSize(pSession.getPlayerDeck().size());
+		response.setDiscardSize(pSession.getDiscards().size());
 		
 		// プロセス２へ
-		response.setProcessState(2);
+		response.setProcessState(CardCaptureConstant.GAMESTATE_ACTION_SELECT);
 
 		return ResponseEntity.status(HttpStatus.OK).body(response);
 	}
 
-	@Operation(summary = "アクションチェック", description = "アクションチェックテスト")
-	@PostMapping("/actionCheckTest")
-	public ResponseEntity<CardCaptureResponse> actionCheckTest() {
-
-		var deckres = new InitGameRes();
-
-//		deckres = ccinitService.init();
-
-		deckres = ccinitService.gameStart();
-
-		ccPlayService.enemyPhase();
-
-		var list = new ArrayList<GameCard>();
-		PlayerSession playData = ccPlayService.disCardAndDrowPhase(list);
-
-		playData = ccPlayService.actionCheck();
-
-		var response = new CardCaptureResponse();
-
-//		response.setEnemyDeck(playData.getEnemyDeck());
-		response.setEnemyArea(playData.getEnemyArea());
-//		response.setPlayerDeck(playData.getPlayerDeck());
-		response.setPlayerHands(playData.getPlayerHands());
-		response.setDiscardSize(1);
-
-		response.setPlayState(pSession.getPlayState());
-		response.setCanCaptureCards(pSession.getCanCaptureCards());
-		response.setCanSealed(pSession.isCanSealed());
-		response.setCanBlowAway(pSession.isCanBlowAway());
-
-		return ResponseEntity.status(HttpStatus.OK).body(response);
-	}
+//	@Operation(summary = "アクションチェック", description = "アクションチェックテスト")
+//	@PostMapping("/actionCheckTest")
+//	public ResponseEntity<CardCaptureResponse> actionCheckTest() {
+//
+//		var deckres = new InitGameRes();
+//
+////		deckres = ccinitService.init();
+//
+//		deckres = ccinitService.gameStart();
+//
+//		ccPlayService.enemyPhase();
+//
+//		var list = new ArrayList<GameCard>();
+//		PlayerSession playData = ccPlayService.disCardAndDrowPhase(list);
+//
+//		playData = ccPlayService.actionCheck();
+//
+//		var response = new CardCaptureResponse();
+//
+////		response.setEnemyDeck(playData.getEnemyDeck());
+//		response.setEnemyArea(playData.getEnemyArea());
+////		response.setPlayerDeck(playData.getPlayerDeck());
+//		response.setPlayerHands(playData.getPlayerHands());
+//		response.setDiscardSize(1);
+//
+//		response.setPlayState(pSession.getPlayState());
+//		response.setCanCaptureCards(pSession.getCanCaptureCards());
+//		response.setCanSealed(pSession.isCanSealed());
+//		response.setCanBlowAway(pSession.isCanBlowAway());
+//
+//		return ResponseEntity.status(HttpStatus.OK).body(response);
+//	}
 
 	@Operation(summary = "アクション実行", description = "プレイヤーアクション判定・実行")
 	@PostMapping("/executeAction")
@@ -183,6 +173,9 @@ public class CardCaptureController {
 			isExecute = ccPlayService.checkActionSeal(target, selected.getDeck());
 		} else if (actionCode == CardCaptureConstant.ACTION_BLOWAWAY) {
 			isExecute = ccPlayService.checkActionBlowAway(target, selected.getDeck());
+		} else if (actionCode == CardCaptureConstant.ACTION_DISCARD) {
+			// ディスカードの場合、チェックなし
+			isExecute = true;
 		}
 		response.setIsSucces(isExecute);
 
@@ -191,13 +184,38 @@ public class CardCaptureController {
 			log.info("CardCaptureController: executeAction: アクション実行 チェックOK" );
 
 			// カードの移動先は前処理にて決定済み
-			PlayerSession pSession = ccPlayService.excecuteAction(actionCode, target, selected.getDeck());
+			ccPlayService.excecuteAction(actionCode, target, selected.getDeck());
+			
+			// 勝利判定
+			PlayerSession pSession = ccPlayService.checkWinCondition();
+			
 			// レスポンスに結果をセット
-			response.setEnemyDeck(pSession.getEnemyDeck());
-			response.setEnemyArea(pSession.getEnemyArea());
-			response.setPlayerHands(pSession.getPlayerHands());
-			response.setDiscards(pSession.getDiscards());
-			response.setSealArea(pSession.getSealArea());
+			if (actionCode == CardCaptureConstant.ACTION_DISCARD) {
+				response.setPlayerHands(pSession.getPlayerHands());
+				response.setDiscardSize(pSession.getDiscards().size());
+				response.setRounds(pSession.getRounds());
+				
+				// プロセス１（セットアップ）へ
+				response.setProcessState(CardCaptureConstant.GAMESTATE_SETUP);				
+				
+			} else {
+				response.setIsSucces(isExecute);
+				response.setEnemyArea(pSession.getEnemyArea());
+				response.setPlayerHands(pSession.getPlayerHands());
+				
+//				response.setRounds(pSession.getRounds());
+				response.setSealAreaSize(pSession.getSealArea().size());
+				response.setPlayerDeckSize(pSession.getPlayerDeck().size());
+				response.setDiscardSize(pSession.getDiscards().size());
+				
+				response.setGameState(pSession.getGameState());
+				response.setGameStateMessage(pSession.getGameStateMessage());
+				
+				// プロセス３へ
+				response.setProcessState(CardCaptureConstant.GAMESTATE_DISCARD);
+			}
+
+			
 		}
 
 		log.info("CardCaptureController: executeAction: アクション実行 終了" );

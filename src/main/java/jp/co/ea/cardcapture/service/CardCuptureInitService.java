@@ -38,6 +38,9 @@ public class CardCuptureInitService {
 	public PlayerSession initGame() {
 
 		log.info("CardCuptureInitService: initGame 開始");
+		
+		// sessionの初期化
+		pSession.init();
 
 		// EnemyDeck、PlayerDeck初期化
 		GameDeck playerDeck = new GameDeck("PlayerDeck");

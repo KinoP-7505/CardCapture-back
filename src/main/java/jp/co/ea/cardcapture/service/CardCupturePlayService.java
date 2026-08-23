@@ -36,33 +36,16 @@ public class CardCupturePlayService {
 
 		log.info("CardCupturePlayService: enemyPhase; EnemyDeck:" + enemyDeck.size());
 
-		// テストコード
-		var discards = pSession.getDiscards();
-		var seal = pSession.getSealArea();
-		// 捨て場２毎
-		var testCard = enemyArea.getDeck().get(0);
-		CardCaptureUtility.deckCardMove(testCard, enemyArea, discards);
-		testCard = enemyArea.getDeck().get(0);
-		CardCaptureUtility.deckCardMove(testCard, enemyArea, discards);
-		// 封印２毎
-		testCard = enemyArea.getDeck().get(0);
-		CardCaptureUtility.deckCardMove(testCard, enemyArea, seal);
-		testCard = enemyArea.getDeck().get(0);
-		CardCaptureUtility.deckCardMove(testCard, enemyArea, seal);
-
 		log.info("CardCupturePlayService: enemyPhase; 盤面操作後 EnemyDeck:" + enemyDeck.size());
 		log.info("CardCupturePlayService: enemyPhase; 盤面操作後 enemyArea:" + enemyArea.size());
 
 		// エリアが４枚未満、かつ、EnemyDeckが0でない場合
-		if (enemyArea.size() < 4 && enemyDeck.size() > 0) {
-			// EnemyAreaが4より小さい、または、enemyDeckが0より大きい場合ドロー
-			while (enemyArea.size() < 4 && enemyDeck.size() > 0) {
-				// EnemyDeckのTopからドロー、EnemyAreaに追加
-				var card = enemyDeck.lookTop();
-				// TOPカードが存在する場合
-				if (card != null) {
-					CardCaptureUtility.deckCardMove(card, enemyDeck, enemyArea);
-				}
+		while (enemyArea.size() < 4 && enemyDeck.size() > 0) {
+			// EnemyDeckのTopからドロー、EnemyAreaに追加
+			var card = enemyDeck.lookTop();
+			// TOPカードが存在する場合
+			if (card != null) {
+				CardCaptureUtility.deckCardMove(card, enemyDeck, enemyArea);
 			}
 		}
 		log.info("CardCupturePlayService: enemyPhase; 補充後 EnemyDeck:" + enemyDeck.size());
@@ -73,38 +56,13 @@ public class CardCupturePlayService {
 	}
 
 	/**
-	 * ディスカード・ドローフェイズ
+	 * ドローフェイズ 手札を4枚になるようドロー
 	 * @param selectCard プレイヤーが選択したカード
 	 */
-	public PlayerSession disCardAndDrowPhase(List<GameCard> selectCards) {
+	public void drawPhase() {
 		var playerDeck = pSession.getPlayerDeck();
 		var playerHands = pSession.getPlayerHands();
 		var discards = pSession.getDiscards();
-
-		// テスト
-		var testCard = playerHands.getDeck().get(0);
-		CardCaptureUtility.deckCardMove(testCard, playerHands, discards);
-		testCard = playerHands.getDeck().get(0);
-		CardCaptureUtility.deckCardMove(testCard, playerHands, discards);
-		testCard = playerHands.getDeck().get(0);
-		CardCaptureUtility.deckCardMove(testCard, playerHands, discards);
-		testCard = playerHands.getDeck().get(0);
-		CardCaptureUtility.deckCardMove(testCard, playerHands, discards);
-
-		log.info("CardCupturePlayService: disCardAndDrowPhase; ディスカード後Pカード枚数:"
-				+ (playerHands.size() + discards.size() + playerDeck.size()));
-		log.info("CardCupturePlayService: disCardAndDrowPhase; ディスカード後playerHands:" + playerHands.size());
-
-		// 選択カードが0枚の場合、終了
-		//		if (selectCards.size() == 0) {
-		//			log.info("CardCupturePlayService: disCardAndDrowPhase; 選択カード0");
-		//			return pSession;
-		//		}
-
-		// PlayerHandsから選択カードを捨て場へ移動
-		for (GameCard card : selectCards) {
-			CardCaptureUtility.deckCardMove(card, playerHands, discards);
-		}
 
 		// 手札を4枚に補充
 		while (playerHands.size() < 4) {
@@ -124,8 +82,6 @@ public class CardCupturePlayService {
 		log.info("CardCupturePlayService: disCardAndDrowPhase; 補充後捨て場枚数:" + discards.size());
 		log.info("CardCupturePlayService: disCardAndDrowPhase; 補充後山札枚数:" + playerDeck.size());
 		log.info("CardCupturePlayService: disCardAndDrowPhase; ドロー後playerHands:" + playerHands.size());
-
-		return pSession;
 	}
 
 	/**
@@ -151,7 +107,7 @@ public class CardCupturePlayService {
 
 		// 全てフェイスカードの場合、敗北ONに設定し、終了
 		if (numFacePlayer == playerHands.size()) {
-			pSession.setPlayState(CardCaptureConstant.PLAY_LOSE_ALLFACE);
+			pSession.setProcessState(CardCaptureConstant.GAMESTATE_DEFEAT);
 			return pSession;
 		}
 
@@ -277,20 +233,29 @@ public class CardCupturePlayService {
 			// 捕獲アクション
 			eTarget = pSession.getDiscards();
 			pTarget = pSession.getDiscards();
-			// カード移動
+			// Enemyカード移動
 			CardCaptureUtility.deckCardMove(targetEnemy, enemyArea, eTarget);
 		} else if (actionCode == CardCaptureConstant.ACTION_SEAL) {
 			// 封印アクション
 			eTarget = pSession.getSealArea();
 			pTarget = pSession.getSealArea();
-			// カード移動
+			// Enemyカード移動
 			CardCaptureUtility.deckCardMove(targetEnemy, enemyArea, eTarget);
 		} else if (actionCode == CardCaptureConstant.ACTION_BLOWAWAY) {
 			// 吹き飛ばしアクション　EnemyCardはEnemyDeckの最下に送る
 			var deck = enemyDeck.getDeck();
 			deck.add(targetEnemy);
+			// 対象EnemyカードをEnemyAreaから削除する。
+			enemyArea.removeCard(targetEnemy.getCode());
 			// プレイヤーカードは封印デッキに追加
 			pTarget = pSession.getSealArea();
+		} else if (actionCode == CardCaptureConstant.ACTION_DISCARD) {
+			// 手札をディスカードエリアに移動
+			pTarget = pSession.getDiscards();
+
+			// 次のラウンド
+			int nextRound = pSession.getRounds() + 1;
+			pSession.setRounds(nextRound);
 		}
 
 		// 使用カードを移動 枚数はチェック済み
@@ -340,7 +305,7 @@ public class CardCupturePlayService {
 	 */
 	public boolean checkActionBlowAway(GameCard targetEnemy, List<GameCard> selected) {
 
-		setTestSession();
+		// setTestSession();
 
 		// 対象カードはEnemyAreaに存在すること
 		boolean isExist = false;
@@ -393,6 +358,33 @@ public class CardCupturePlayService {
 		var discard = new GameDeck("discards");
 		pSession.setDiscards(discard);
 
+	}
+
+	/**
+	 * ゲーム勝利判定
+	 * @return 判定結果
+	 */
+	public PlayerSession checkWinCondition() {
+		GameDeck enemyDeck = pSession.getEnemyDeck();
+		GameDeck enemyArea = pSession.getEnemyArea();
+		
+		// ゲーム状態
+		int gameState = 0;
+		// ゲーム状態メッセージ
+		String gameStateMessage = "";	
+		// 敵デッキなし、敵エリアなしの場合、プレイヤー勝利
+		if (enemyArea.size() == 0 && enemyDeck.size() == 0 ) {
+			gameState = CardCaptureConstant.GAMESTATE_WIN;
+			gameStateMessage = "ゲームに勝利しました。";
+		} else {
+			gameState = CardCaptureConstant.GAMESTATE_PLAYING;
+			gameStateMessage = "ゲーム継続";
+		}
+		
+		pSession.setGameState(gameState);
+		pSession.setGameStateMessage(gameStateMessage);
+		
+		return pSession;
 	}
 
 }
