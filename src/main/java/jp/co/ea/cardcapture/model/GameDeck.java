@@ -81,6 +81,13 @@ public class GameDeck {
 	}
 	
 	/**
+	 * デッキを初期化する
+	 */
+	public void clearDeck() {
+		deck.clear();
+	}
+	
+	/**
 	 * デッキからcodeのカードを削除
 	 * @param cardCode 対象カードコード
 	 */

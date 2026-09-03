@@ -38,8 +38,10 @@ public record CardCaptureConstant() {
 	public static final Integer GAMESTATE_INIT = 0;
 	/** フェイズ：セットアップ **/
 	public static final Integer GAMESTATE_SETUP = 1;
-	/** フェイズ：セットアップ **/
+	/** フェイズ：アクション **/
 	public static final Integer GAMESTATE_ACTION_SELECT = 2;
+	/** フェイズ：結果チェック **/
+	public static final Integer GAMESTATE_RESULT = 4;
 	/** フェイズ：ディスカード **/
 	public static final Integer GAMESTATE_DISCARD = 5;
 	

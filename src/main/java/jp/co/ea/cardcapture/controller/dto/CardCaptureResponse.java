@@ -13,6 +13,10 @@ public class CardCaptureResponse {
 	 * 処理状態
 	 */
 	private int processState;
+	/**
+	 * ゲーム状態
+	 */
+	private int gameState;
 
 	/**
 	 * プレイヤーデッキ

@@ -89,126 +89,72 @@ public class CardCupturePlayService {
 	 * プレイヤーの実行可能アクションをチェックする
 	 * @return プレイヤー状態
 	 */
-	public PlayerSession actionCheck() {
-
-		var playerHands = pSession.getPlayerHands();
-		var enemyArea = pSession.getEnemyArea();
-
-		// 手札チェック
-		// 全フェイスカード判定
-		int numFacePlayer = 0;
-		for (GameCard card : playerHands.getDeck()) {
-			// フェイスカードの場合
-			if (card.isFace()) {
-				numFacePlayer++;
-			}
-		}
-		pSession.setNumFacePlayer(numFacePlayer);
-
-		// 全てフェイスカードの場合、敗北ONに設定し、終了
-		if (numFacePlayer == playerHands.size()) {
-			pSession.setProcessState(CardCaptureConstant.GAMESTATE_DEFEAT);
-			return pSession;
-		}
-
-		// 捕獲可能チェック
-		List<Boolean> captureCards = new ArrayList<Boolean>();
-		for (GameCard eCard : enemyArea.getDeck()) {
-			// エネミーカードのスート
-			var enemyCardSuit = eCard.getSuit();
-
-			boolean isCapture = false;
-			for (GameCard pCard : enemyArea.getDeck()) {
-				var pCardSuit = pCard.getSuit();
-				// スートが一致する敵カードがあれば、そのカードは捕獲アクション可能
-				if (enemyCardSuit == pCardSuit) {
-					isCapture = true;
-					break;
-				}
-			}
-			// 捕獲カード状態に追加
-			captureCards.add(isCapture);
-
-		}
-		pSession.setCanCaptureCards(captureCards);
-
-		// 封印可能チェック
-		// EnemyAreaの最前カードを参照
-		GameCard targetEnemyCard = enemyArea.getDeck().get(0);
-		// 封印可能判定（フェイスカード判定反転）を格納
-		pSession.setCanSealed(targetEnemyCard.isNumberCard());
-
-		// 吹き飛ばし可能チェック
-
-		int numFaceEnemy = 0;
-		for (GameCard eCard : enemyArea.getDeck()) {
-			// フェイスカードの場合
-			if (eCard.isFace()) {
-				numFaceEnemy++;
-			}
-		}
-		// numFaceEnemy
-		pSession.setNumFaceEnemy(numFaceEnemy);
-
-		// 敵エリアが全てフェイスカードではない場合、吹き飛ばし可能
-		pSession.setCanBlowAway(numFaceEnemy < enemyArea.size());
-
-		return pSession;
-	}
-
-	/**
-	 * 捕獲アクションチェック
-	 * @param targetEnemy 捕獲対象カード
-	 * @param selected 選択カード
-	 * @return アクション結果
-	 */
-	public boolean checkActionCapture(GameCard targetEnemy, List<GameCard> selected) {
-		
-		log.info("CardCupturePlayService: checkActionCapture: 捕獲アクションチェック 開始" );
-
-		int numberTotal = 0;
-		int maxNumber = 0;
-		int numberJoker = 0;
-
-		// 捕獲実行チェック
-		// 1.選択カードチェック 選択カードに対象カードスートと同じカードが在ること
-		for (GameCard sCard : selected) {
-			var eSuit = targetEnemy.getSuit();
-			var sSuit = sCard.getSuit();
-
-			// ジョーカーの場合、ジョーカー枚数をカウント、ループ継続
-			if (sSuit == TrumpMark.JOKER.getCode()) {
-				++numberJoker;
-				continue;
-			}
-
-			// スート不一致が在る場合は実行チェックエラー(false返却）
-			if (eSuit != sSuit) {
-				return false;
-			} else {
-				// 最大ナンバー
-				if (maxNumber == 0 || (maxNumber > 0 && maxNumber < sCard.getNumber())) {
-					// maxNumberが初期値、または、
-					// 最大ナンバーが更新されている、かつ、現在参照カードナンバーが大きい場合
-					// maxNumberを現在カードナンバーで更新
-					maxNumber = sCard.getNumber();
-				}
-				// ナンバー合計加算
-				numberTotal += sCard.getNumber();
-			}
-		}
-
-		// 2.ナンバーチェック
-		// 選択カードナンバー合計が捕獲カードナンバー以上の場合
-		// ジョーカーナンバーは選択カードの最大値と同じ
-		// ジョーカー枚数を加算
-		boolean isSucces = numberTotal + (maxNumber * numberJoker) >= (targetEnemy.getNumber());
-
-		log.info("CardCupturePlayService: checkActionCapture: 捕獲アクションチェック 終了" );
-		
-		// 結果を返却
-		return isSucces;
-	}
+//	public PlayerSession actionCheck() {
+//
+//		var playerHands = pSession.getPlayerHands();
+//		var enemyArea = pSession.getEnemyArea();
+//
+//		// 手札チェック
+//		// 全フェイスカード判定
+//		int numFacePlayer = 0;
+//		for (GameCard card : playerHands.getDeck()) {
+//			// フェイスカードの場合
+//			if (card.isFace()) {
+//				numFacePlayer++;
+//			}
+//		}
+//		pSession.setNumFacePlayer(numFacePlayer);
+//
+//		// 全てフェイスカードの場合、敗北ONに設定し、終了
+//		if (numFacePlayer == playerHands.size()) {
+//			pSession.setProcessState(CardCaptureConstant.GAMESTATE_DEFEAT);
+//			return pSession;
+//		}
+//
+//		// 捕獲可能チェック
+//		List<Boolean> captureCards = new ArrayList<Boolean>();
+//		for (GameCard eCard : enemyArea.getDeck()) {
+//			// エネミーカードのスート
+//			var enemyCardSuit = eCard.getSuit();
+//
+//			boolean isCapture = false;
+//			for (GameCard pCard : enemyArea.getDeck()) {
+//				var pCardSuit = pCard.getSuit();
+//				// スートが一致する敵カードがあれば、そのカードは捕獲アクション可能
+//				if (enemyCardSuit == pCardSuit) {
+//					isCapture = true;
+//					break;
+//				}
+//			}
+//			// 捕獲カード状態に追加
+//			captureCards.add(isCapture);
+//
+//		}
+//		pSession.setCanCaptureCards(captureCards);
+//
+//		// 封印可能チェック
+//		// EnemyAreaの最前カードを参照
+//		GameCard targetEnemyCard = enemyArea.getDeck().get(0);
+//		// 封印可能判定（フェイスカード判定反転）を格納
+//		pSession.setCanSealed(targetEnemyCard.isNumberCard());
+//
+//		// 吹き飛ばし可能チェック
+//
+//		int numFaceEnemy = 0;
+//		for (GameCard eCard : enemyArea.getDeck()) {
+//			// フェイスカードの場合
+//			if (eCard.isFace()) {
+//				numFaceEnemy++;
+//			}
+//		}
+//		// numFaceEnemy
+//		pSession.setNumFaceEnemy(numFaceEnemy);
+//
+//		// 敵エリアが全てフェイスカードではない場合、吹き飛ばし可能
+//		pSession.setCanBlowAway(numFaceEnemy < enemyArea.size());
+//
+//		return pSession;
+//	}
 
 	/**
 	 * アクション実行
@@ -217,8 +163,6 @@ public class CardCupturePlayService {
 	public PlayerSession excecuteAction(Integer actionCode, GameCard targetEnemy, List<GameCard> selected) {
 		
 		log.info("CardCupturePlayService: excecuteAction: アクション実行 開始" );
-
-//		setTestSession();
 
 		GameDeck enemyDeck = pSession.getEnemyDeck();
 		GameDeck enemyArea = pSession.getEnemyArea();
@@ -235,27 +179,29 @@ public class CardCupturePlayService {
 			pTarget = pSession.getDiscards();
 			// Enemyカード移動
 			CardCaptureUtility.deckCardMove(targetEnemy, enemyArea, eTarget);
+			
+			log.info("CardCupturePlayService: excecuteAction: 捕獲 EnemyCard処理" );
+
 		} else if (actionCode == CardCaptureConstant.ACTION_SEAL) {
 			// 封印アクション
 			eTarget = pSession.getSealArea();
 			pTarget = pSession.getSealArea();
 			// Enemyカード移動
 			CardCaptureUtility.deckCardMove(targetEnemy, enemyArea, eTarget);
+
+			log.info("CardCupturePlayService: excecuteAction: 封印 EnemyCard処理" );
+
 		} else if (actionCode == CardCaptureConstant.ACTION_BLOWAWAY) {
-			// 吹き飛ばしアクション　EnemyCardはEnemyDeckの最下に送る
-			var deck = enemyDeck.getDeck();
-			deck.add(targetEnemy);
+			// 吹き飛ばしアクション　
 			// 対象EnemyカードをEnemyAreaから削除する。
 			enemyArea.removeCard(targetEnemy.getCode());
+			// EnemyCardはEnemyDeckの最下に送る
+			enemyDeck.getDeck().add(targetEnemy);
 			// プレイヤーカードは封印デッキに追加
 			pTarget = pSession.getSealArea();
-		} else if (actionCode == CardCaptureConstant.ACTION_DISCARD) {
-			// 手札をディスカードエリアに移動
-			pTarget = pSession.getDiscards();
+			
+			log.info("CardCupturePlayService: excecuteAction: 吹き飛ばし EnemyCard処理" );
 
-			// 次のラウンド
-			int nextRound = pSession.getRounds() + 1;
-			pSession.setRounds(nextRound);
 		}
 
 		// 使用カードを移動 枚数はチェック済み
@@ -263,11 +209,71 @@ public class CardCupturePlayService {
 		for (GameCard card : selected) {
 			// 選択Cardを移動
 			CardCaptureUtility.deckCardMove(card, playerHand, pTarget);
+
+			log.info("CardCupturePlayService: excecuteAction: 手札処理" );
 		}
+		
+		// アクション後、リザルトプロセスへ
+		pSession.setProcessState(CardCaptureConstant.GAMESTATE_RESULT);
+
 		
 		log.info("CardCupturePlayService: excecuteAction: アクション実行 終了" );
 
 		return pSession;
+	}
+
+	/**
+	 * 捕獲アクションチェック
+	 * @param targetEnemy 捕獲対象カード
+	 * @param selected 選択カード
+	 * @return アクション結果
+	 */
+	public boolean checkActionCapture(GameCard targetEnemy, List<GameCard> selected) {
+		
+		log.info("CardCupturePlayService: checkActionCapture: 捕獲アクションチェック 開始" );
+	
+		int numberTotal = 0;
+		int maxNumber = 0;
+		int numberJoker = 0;
+	
+		// 捕獲実行チェック
+		// 1.選択カードチェック 選択カードに対象カードスートと同じカードが在ること
+		for (GameCard sCard : selected) {
+			var eSuit = targetEnemy.getSuit();
+			var sSuit = sCard.getSuit();
+	
+			// ジョーカーの場合、ジョーカー枚数をカウント、ループ継続
+			if (sSuit == TrumpMark.JOKER.getCode()) {
+				++numberJoker;
+				continue;
+			}
+	
+			// スート不一致が在る場合は実行チェックエラー(false返却）
+			if (eSuit != sSuit) {
+				return false;
+			} else {
+				// 最大ナンバー
+				if (maxNumber == 0 || (maxNumber > 0 && maxNumber < sCard.getNumber())) {
+					// maxNumberが初期値、または、
+					// 最大ナンバーが更新されている、かつ、現在参照カードナンバーが大きい場合
+					// maxNumberを現在カードナンバーで更新
+					maxNumber = sCard.getNumber();
+				}
+				// ナンバー合計加算
+				numberTotal += sCard.getNumber();
+			}
+		}
+	
+		// 2.ナンバーチェック
+		// 選択カードナンバー合計が捕獲カードナンバー以上の場合
+		// ジョーカーナンバーは選択カードの最大値と同じ
+		// ジョーカー枚数を加算
+		boolean isSucces = numberTotal + (maxNumber * numberJoker) >= (targetEnemy.getNumber());
+	
+		log.info("CardCupturePlayService: checkActionCapture: 捕獲アクションチェック 終了" );
+		
+		// 結果を返却
+		return isSucces;
 	}
 
 	/**
@@ -325,6 +331,34 @@ public class CardCupturePlayService {
 		return isExist && selected1.isNumberCard() && selected2.isNumberCard();
 
 	}
+	
+	/**
+	 * ディスカード実行
+	 * 手札を廃棄エリアへ移動
+	 * @return アクション結果
+	 */
+	public void excecuteDiscards(List<GameCard> selected) {
+
+		log.info("CardCupturePlayService: excecuteDiscards: ディスカード処理　開始 selected:" + selected.size() );
+		// 選択カードを手札から廃棄エリアへ移動
+		GameDeck playerHand = pSession.getPlayerHands();
+		var discards = pSession.getDiscards();
+		for (GameCard card : selected) {
+			// 選択Cardを移動
+			CardCaptureUtility.deckCardMove(card, playerHand, discards);
+		}
+		
+		// 次のラウンド
+		int nextRound = pSession.getRounds() + 1;
+		pSession.setRounds(nextRound);
+		
+		// ディスカードの場合、プロセス開始をセット
+		pSession.setProcessState(CardCaptureConstant.GAMESTATE_SETUP);	
+		
+		log.info("CardCupturePlayService: excecuteDiscards: ディスカード処理　終了" );
+		
+	}
+
 
 	/**
 	 * セッションのモック
@@ -370,21 +404,73 @@ public class CardCupturePlayService {
 		
 		// ゲーム状態
 		int gameState = 0;
+		Integer processState = pSession.getProcessState();
 		// ゲーム状態メッセージ
 		String gameStateMessage = "";	
 		// 敵デッキなし、敵エリアなしの場合、プレイヤー勝利
 		if (enemyArea.size() == 0 && enemyDeck.size() == 0 ) {
 			gameState = CardCaptureConstant.GAMESTATE_WIN;
 			gameStateMessage = "ゲームに勝利しました。";
+			processState = CardCaptureConstant.GAMESTATE_RESULT;
+			
 		} else {
 			gameState = CardCaptureConstant.GAMESTATE_PLAYING;
 			gameStateMessage = "ゲーム継続";
+			processState = CardCaptureConstant.GAMESTATE_RESULT;
 		}
 		
 		pSession.setGameState(gameState);
 		pSession.setGameStateMessage(gameStateMessage);
+		pSession.setProcessState(processState);
 		
 		return pSession;
 	}
+	
+	public GameDeck createMockGameDeck(String name) {
+
+		GameDeck mockDeck = new GameDeck(name);
+
+		switch (name) {
+		case "pHands" -> {
+			List<GameCard> deck = new ArrayList<GameCard>();
+
+			GameCard card1 = new GameCard(104);
+			GameCard card2 = new GameCard(103);
+			GameCard card3 = new GameCard(102);
+			GameCard card4 = new GameCard(501);
+
+			deck.add(card1);
+			deck.add(card2);
+			deck.add(card3);
+			deck.add(card4);
+
+			mockDeck.setDeck(deck);
+		}
+		case "eArea" -> {
+			List<GameCard> deck = new ArrayList<GameCard>();
+
+			GameCard card1 = new GameCard(105);
+			GameCard card2 = new GameCard(108);
+			GameCard card3 = new GameCard(114);
+			GameCard card4 = new GameCard(205);
+
+			deck.add(card1);
+			deck.add(card2);
+			deck.add(card3);
+			deck.add(card4);
+
+			mockDeck.setDeck(deck);
+
+		}
+
+		default -> throw new IllegalArgumentException("Unexpected value: " + name);
+		}
+
+		//		private List<GameCard> deck = new ArrayList<GameCard>();
+
+		return mockDeck;
+
+	}
+
 
 }
