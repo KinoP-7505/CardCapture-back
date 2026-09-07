@@ -2,6 +2,7 @@ package jp.co.ea.cardcapture.config;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -9,37 +10,41 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class WebConfig implements WebMvcConfigurer {
+public class WebConfig {
 
-	// application.properties の app.cors.allowed-origins の値を配列として取得
-	@Value("${app.cors.allowed-origins}")
-	private String[] allowedOrigins;
+	// application.properties から文字列として安全に受け取る
+    @Value("${app.cors.allowed-origins}")
+    private String rawAllowedOrigins;
 
     @Bean
     CorsFilter corsFilter() {
-        CorsConfiguration config = new CorsConfiguration();
+    	CorsConfiguration config = new CorsConfiguration();
 
-        // 1. 環境変数から読み込んだドメイン（Vercel, localhost）を許可
-        config.setAllowedOrigins(Arrays.asList(allowedOrigins));
+        // カンマ区切りの文字列を分解し、前後の不要な空白を完全除去
+        List<String> origins = Arrays.stream(rawAllowedOrigins.split(","))
+                .map(String::trim)
+                .filter(origin -> !origin.isEmpty())
+                .collect(Collectors.toList());
+
+        // デバッグ用ログ出力（RenderのLOGSタブで確認可能）
+        System.out.println("=== Loaded CORS Allowed Origins ===");
+        origins.forEach(origin -> System.out.println("Allowed: [" + origin + "]"));
+
+        // 1. 許可ドメインの設定
+        config.setAllowedOrigins(origins);
 
         // 2. Cookie送受信（withCredentials: true）を許可
         config.setAllowCredentials(true);
 
-        // 3. 全てのリクエストヘッダーおよびレスポンスヘッダーの参照を許可
+        // 3. ヘッダー・メソッド・キャッシュ設定
         config.setAllowedHeaders(List.of("*"));
         config.setExposedHeaders(List.of("*"));
-
-        // 4. 許可するHTTPメソッド
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-
-        // 5. プリフライト結果のキャッシュ時間（1時間）
         config.setMaxAge(3600L);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        // アプリ内の全パス（springdoc/openapi を含む）に適用
         source.registerCorsConfiguration("/**", config);
 
         return new CorsFilter(source);
