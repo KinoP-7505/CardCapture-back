@@ -16,6 +16,7 @@ public class WebConfig implements WebMvcConfigurer {
 				.allowedOrigins(allowedOrigins) // 環境変数から取得したドメインのみを許可
 				.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
 				.allowedHeaders("*")
+				.exposedHeaders("*") // レスポンスヘッダーの参照を許可
 				.allowCredentials(true) // withCredentials: true に対応
 				.maxAge(3600);
 	}
