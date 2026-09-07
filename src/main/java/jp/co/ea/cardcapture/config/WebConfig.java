@@ -1,9 +1,11 @@
 package jp.co.ea.cardcapture.config;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+@Configuration
 public class WebConfig implements WebMvcConfigurer {
 
 	// application.properties の app.cors.allowed-origins の値を配列として取得
